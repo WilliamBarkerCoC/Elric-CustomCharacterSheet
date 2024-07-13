@@ -5,5 +5,5 @@ Alterations to the Roll20 Elric! (Stormbringer 5th Edition) Character Sheet auth
 - Addition of Hit Locations similar to RuneQuest
 - Additional tab for more Bound Entities and two additional slots in the Magic tab
 - Change of text Font and Color
-- Slight additions/changes in functionality
+- Slight additions/changes in functionality: Removed POWx4 button and Inscribed Runes, added Grimoires and Damage to Spells
 - Minor typographical changes
