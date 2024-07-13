@@ -164,19 +164,19 @@ input.sheet-tab6 + span::before
 */
 /* From Runequest6 for Hit Location Armor */
 input.sheet-full {
-    width: 95%;
+    width: 100%;
 }
 input.sheet-value_full {
-    width: 95%;
-    text-align: center;
+    width: 100%;
+    /*text-align: center;*/
 }
 input.sheet-value {
-    width: 95%;
+    width: 100%;
     text-align: center;
 }
 input.sheet-divider {
-    width: 15%;
-	height:150%
+    width: 100%;
+	/^height:160%*/
     text-align: center;
 }
 
@@ -212,8 +212,9 @@ input.sheet-divider {
 
 .sheet-hitLocationsWrapper {
 	display: grid;
-    grid-template-columns: 9% 23% 23% 6% 8% 2% 8% 8% 2% 8%;
-	/*grid-template-columns: 45px 160px 160px 40px 45px 12px 45px 45px 12px 45px;*/
+	grid-template-columns: 8% 15% 18% 15% 12% 4% 11% 13%;
+    /* grid-template-columns: 9% 23% 23% 6% 8% 2% 8% 8% 2% 8%; */
+	/* grid-template-columns: 45px 160px 160px 40px 45px 12px 45px 45px 12px 45px;*/
     grid-gap: 0px;
     grid-auto-rows: minmax(auto, auto);
 }
@@ -245,8 +246,8 @@ input.sheet-divider {
 
 .sheet-spellRuneStorageWrapper{
 	display: grid;
-    grid-template-columns: 45% 55%;
-    grid-gap: 5px;
+    grid-template-columns: 48% 52%;
+    grid-gap: 3px;
     grid-auto-rows: minmax(auto, auto);
 
 }
@@ -255,8 +256,8 @@ input.sheet-divider {
 
 .sheet-spellWrapper{
 	display: grid;
-    grid-template-columns:  119px 78px 46px 78px 218px;
-    grid-gap: 3px;
+    grid-template-columns:  110px 68px 28px 29px 58px 58px 29px;
+    grid-gap: 1px;
     grid-auto-rows: minmax(auto, auto);
 }
 
@@ -267,21 +268,22 @@ input.sheet-divider {
 }
 
 
-.sheet-runeWrapper{
+.sheet-grimWrapper{
 	display: grid;
-    grid-template-columns: 27% 13% 5% 19% 11% 19%;
-    grid-gap: 3px;
+    /*grid-template-columns: 35% 13% 5% 19% 25%;*/
+	grid-template-columns:  154px 74px 26px 70px 80px;
+    grid-gap: 2px;
     grid-auto-rows: minmax(auto, auto);
 }
 
 
-.sheet-runeWrapper input,
-.sheet-runeWrapper select {
+.sheet-grimeWrapper input,
+.sheet-grimWrapper select {
 	font-size:x-small;
 	width:100%;
 }
 
-.sheet-runeWrapper select {
+.sheet-grimWrapper select {
 	margin-bottom: 0px;
     padding-left: 0px;
 }
@@ -290,7 +292,7 @@ input.sheet-divider {
 
 .sheet-mpStorageWrapper{
 	display: grid;
-    grid-template-columns: 359px 33px 33px;
+    grid-template-columns: 334px 33px 33px;
     grid-gap: 3px;
     grid-auto-rows: minmax(auto, auto);
 }
@@ -299,7 +301,7 @@ input.sheet-divider {
 
 .charsheet .sheet-spellEffect{
 	font-size:xx-small;
-	height:8em;
+	height:2em;
 	width:95%;
 }
 
@@ -491,6 +493,10 @@ input.sheet-spellHgt {
 	margin-top:10px;
 }
 
+.sheet-marginT2{
+	margin-top:2px;
+}
+
 .sheet-demonStatWrapper{
 
 	display: grid;
@@ -648,6 +654,11 @@ input.sheet-spellHgt {
 	font-weight:bold;
 }
 
+.sheet-skillLabel{
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
 
 .sheet-dbLabel{
 	width:50px;
@@ -683,7 +694,6 @@ input.sheet-spellHgt {
 .sheet-bold{
 	font-weight:bold;
 }
-
 
 .sheet-equipment{
     min-height: 5em;
@@ -866,13 +876,11 @@ input.sheet-spellHgt {
 		grid-row:8;
 }
 
-
-.sheet-row10{
+.sheet-row9{
 		grid-row:9;
 }
 
-
-.sheet-row8{
+.sheet-row10{
 		grid-row:10;
 }
 
@@ -1083,9 +1091,16 @@ div.sheet-skills {
 	width:90%;
 }
 
+.sheet-cellFillFully{
+	width:98%;
+}
 .sheet-2digits{
 		text-align:center;
 		width:35px;
+}
+.sheet-2digitsSmall{
+		text-align:center;
+		width:28px;
 }
 
 .sheet-majWndButt{
@@ -1483,7 +1498,7 @@ div.repcontrol.editmode button.repcontrol_edit::before
 	background-color:black!important;
 }
 
-
+ll
 .sheet-rolltemplate-h2hFumble{
 	font-family: 'Georgia';
 }
