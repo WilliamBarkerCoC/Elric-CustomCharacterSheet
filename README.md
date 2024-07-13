@@ -7,3 +7,4 @@ Alterations to the Roll20 Elric! (Stormbringer 5th Edition) Character Sheet auth
 - Change of text Font and Color
 - Slight additions/changes in functionality: Removed POWx4 button and Inscribed Runes, added Grimoires and Damage to Spells
 - Minor typographical changes
+Fit and finish stage. WHen confirmed will remove comments and extraneaous code
