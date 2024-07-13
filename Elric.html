@@ -26,7 +26,7 @@
 					<input name="attr_chaos" class="sheet-allgValues" type="text" value="0">
 					<div class="sheet-allgCheck">
 						<input name="attr_chaosChk" type="checkbox" value="0">
-						<button  type="roll" name="roll_chaos" class="sheet-allg_roll"  value="&amp;{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{chaos})]]}}  {{crit=[[round(([[(@{chaos})]])/5)+1]]}} {{success=[[(@{chaos})]]}} {{roll=[[1d100]]}} {{skill=Chaos Roll}} {{type=0}} {{impale=0}}"><span data-i18n="Chaos">Chaos</span></button>
+						<button  type="roll" name="roll_chaos" class="sheet-allg_roll" value="&amp;{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{chaos})]]}}  {{crit=[[round(([[(@{chaos})]])/5)+1]]}} {{success=[[(@{chaos})]]}} {{roll=[[1d100]]}} {{skill=Chaos Roll}} {{type=0}} {{impale=0}}"><span data-i18n="Chaos">Chaos</span></button>
 					</div>
 					<select class="sheet-allegianceRank"  name="attr_chaosRank">
 						<option selected value=""></option>
@@ -231,16 +231,16 @@
 
 				</div>
 			</div>
-			<div class="fullDivider sheet-centerText">
+<!--			<div class="fullDivider sheet-centerText">
 				<div class="sheet-header2" nodata-i18n="Skills">Skills</div>
 			</div>
-
+-->
 				<div class="sheet-modDiv">
 					<span class="sheet-allgSpan sheet-allFrame1">
 						<div style="text-align: center;">
-							<input name="attr_skillMod" class="sheet-allgValues" type="text" value="0">
+							<input name="attr_skillMod" class="sheet-allgValues" type="text" value="0")>
 							<div class="sheet-allgCheck" style="text-align: center;">
-								<span data-i18n="Modifier">Modifier</span>
+								<span data-i18n="Fate">Fate</span>
 							</div>
 						</div>
 					</span>
@@ -248,6 +248,10 @@
 			<div class="sheet-skillsWrapper">
 
 				<div class="sheet-col1">
+					<div style="text-align: center;">
+						<span class="sheet-skillLabel" style="text-align: center;" nodata-i18n="Skills">Skills</span>
+					</div>
+
 					<fieldset class="repeating_skills1">
 						<div class="sheet-skills">
 							<input name="attr_expCheck" type="checkbox">
@@ -277,14 +281,14 @@
 
 				<div class="sheet-col4">
 					<div style="text-align: center;">
-						<span style="font-weight: bold;" nodata-i18n="Weapons">Weapons</span>
+						<span class="sheet-skillLabel" style="text-align: center;" nodata-i18n="Weapons">Weapons</span>
 					</div>
 
 					<fieldset class="repeating_Weapons">
 						<div class="sheet-skills">
 							<input name="attr_expCheck" type="checkbox">
 							<input name="attr_skill" class="sheet-text_input sheet-skillName" type="text" value="Class ">
-							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:skillRoll} {{name=@{character_name}}} {{skillvalue=[[(@{skillTotal})]]}} {{fumble=[[{(101-(round((100-(@{skillTotal}+@{skill_mod}))/20))),100}kl1]]}} {{crit=[[round(([[(@{skillTotal}+@{skill_mod})]])/20)+1]]}}  {{special=[[round(([[(@{skillTotal}+@{skill_mod})]])/5)+1]]}}    {{success=[[(@{skillTotal}+@{skill_mod})]]}} {{roll=[[1d100]]}} {{skillname=@{skill}}}"></button>
+							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/5)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=0}} {{impale=0}}"></button>
 						</div>
 					</fieldset>
 				</div>
@@ -295,7 +299,7 @@
 			<div class="sheet-hpShieldWrapper">
 				<div class="sheet-col1 sheet-row1">
 					<div class="hpDivider sheet-centerText">
-						<div class="sheet-header2 bold" nodata-i18n="Hit-Points-Damage">Hit Points & Damage</div>
+						<div class="sheet-header2 sheet-bold" nodata-i18n="Hit-Points-Damage">Hit Points & Damage</div>
 					</div>
 
 					<div>
@@ -305,7 +309,7 @@
 						</div>
 						<div>
 							<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-							<input name="attr_wounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx4" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{pow}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button>
+							<input name="attr_wounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0">
 						</div>
 					</div>
 				</div>
@@ -430,122 +434,245 @@
 					</div>
 				</div>
 			</div>
+			<br>
 			<div  class="sheet-centerText">
-                <table class="full">
-                    <tr>
-                        <td style="width: 84%; white-space: nowrap; text-align: center;"><h3>Hit Locations & Armor</h3></td>
-                        <td style="width: 100%; text-align: right;"><h5 style="display: inline">Armor Penalty: </h5><input type="number" class="value" name="attr_armor_penalty" value="-1*Math.ceil((@{hitloc1_enc}+@{hitloc2_enc}+@{hitloc3_enc}+@{hitloc4_enc}+@{hitloc5_enc}+@{hitloc6_enc}+@{hitloc7_enc}+@{hitloc8_enc}+@{hitloc9_enc}+@{hitloc10_enc}+@{hitloc11_enc})/5)" readonly/></td>
-                    </tr>
-                </table>
-				<div class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row1">1d20</div>
+				<div class="sheet-col1 sheet-row1">
+					<div class="sheet-centerText">
+						<div class="sheet-header2 sheet-bold" nodata-i18n="Hit Locations & Armor">Hit Locations & Armor</div>
+					</div>
+				</div>
+				<div class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row1"><h5><button type="roll" name="roll_hitloc" value="&{template:armor} {{armorTitle=Hit Location}} {{type=[[3]]}} {{deflect=[[d20]]}}"></h5></div>
 					<div class="sheet-col2  sheet-row1"><h5>Location</h5></div>
 					<div class="sheet-col3  sheet-row1"><h5>Armor Worn</h5></div>
-					<div class="sheet-col4  sheet-row1"><h5>ENC</h5></div>
-					<div class="sheet-col5  sheet-row1"></div>
-					<div class="sheet-col6  sheet-row1"><h5>AP</h5></div>
-					<div class="sheet-col7  sheet-row1"></div>
-					<div class="sheet-col8  sheet-row1"></div>
-					<div class="sheet-col9  sheet-row1"><h5>HP</h5></div>
-					<div class="sheet-col10 sheet-row1"></div>
+					<div class="sheet-col4  sheet-row1"><h5>Encumbrance</h5></div>
+					<div class="sheet-col5  sheet-row1"><h5>AP</h5></div>
+					<div class="sheet-col6  sheet-row1"><h5>Roll</h5></div>
+					<div class="sheet-col7  sheet-row1"><h5>Armor HP</h5></div>
+					<div class="sheet-col8  sheet-row1"><h5>Dodge/Parry</h5></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row2"><input class="value_full" type="text" name="attr_hitloc1_roll" value="1-3"/></div>
-					<div class="sheet-col2  sheet-row2"><input class="full" type="text" name="attr_hitloc1" value="Right Leg"/></div>
-					<div class="sheet-col3  sheet-row2"><input class="full" type="text" name="attr_hitloc1_armor"/></div>
-					<div class="sheet-col4  sheet-row2"><input class="value" type="text" name="attr_hitloc1_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row2"><input class="value" type="text" name="attr_hitloc1_ap"/></div>
-					<div class="sheet-col6  sheet-row2"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row2"><input class="value" type="number" name="attr_hitloc1_ap_max"/></div>
-					<div class="sheet-col8  sheet-row2"><input class="value" type="number" name="attr_hitloc1_hp"/></div>
-					<div class="sheet-col9  sheet-row2">/</div>
-					<div class="sheet-col10 sheet-row2"><input class="value" type="number" name="attr_hitloc1_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row2"><input class="sheet-value_full" type="text" name="attr_hitloc1_roll" value="1-3"/></div>
+					<div class="sheet-col2  sheet-row2"><input class="sheet-full" type="text" name="attr_hitloc1" value="Right Leg"/></div>
+					<div class="sheet-col3  sheet-row2"><input class="sheet-full" type="text" name="attr_hitloc1_armor"/></div>
+					<div class="sheet-col4  sheet-row2 sheet-armorRow">
+							<select name="attr_hitloc1_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>
+					<div class="sheet-col5  sheet-row2"><input class="sheet-value" type="text" name="attr_hitloc1_ap" value="0"/></div>
+					<div class="sheet-col6  sheet-row2"><button type="roll" name="roll_hitloc1_ap" value="&{template:armor} {{armorTitle=@{hitloc1} (@{hitloc1_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc1_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row2"><input class="sheet-value" type="text" name="attr_hitloc1_hp"/></div>
+					<div class="sheet-col8  sheet-row2"><input class="sheet-value" type="text" name="attr_hitloc1_dodge" value=""/></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row3"><input class="value_full" type="text" name="attr_hitloc2_roll" value="4-6"/></div>
-					<div class="sheet-col2  sheet-row3"><input class="full" type="text" name="attr_hitloc2" value="Left Leg"/></div>
-					<div class="sheet-col3  sheet-row3"><input class="full" type="text" name="attr_hitloc2_armor"/></div>
-					<div class="sheet-col4  sheet-row3"><input class="value" type="text" name="attr_hitloc2_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row3"><input class="value" type="text" name="attr_hitloc2_ap"/></div>
-					<div class="sheet-col6  sheet-row3"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row3"><input class="value" type="number" name="attr_hitloc2_ap_max"/></div>
-					<div class="sheet-col8  sheet-row3"><input class="value" type="number" name="attr_hitloc2_hp"/></div>
-					<div class="sheet-col9  sheet-row3">/</div>
-					<div class="sheet-col10 sheet-row3"><input class="value" type="number" name="attr_hitloc2_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row3"><input class="sheet-value_full" type="text" name="attr_hitloc2_roll" value="4-6"/></div>
+					<div class="sheet-col2  sheet-row3"><input class="sheet-full" type="text" name="attr_hitloc2" value="Left Leg"/></div>
+					<div class="sheet-col3  sheet-row3"><input class="sheet-full" type="text" name="attr_hitloc2_armor"/></div>
+					<div class="sheet-col4  sheet-row3 sheet-armorRow">
+							<select name="attr_hitloc2_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row3"><input class="sheet-value" type="text" name="attr_hitloc2_ap"/></div>
+					<div class="sheet-col6  sheet-row3"><button type="roll" name="roll_hitloc2_ap" value="&{template:armor} {{armorTitle=@{hitloc2} (@{hitloc2_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc2_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row3"><input class="sheet-value" type="text" name="attr_hitloc2_hp"/></div>
+					<div class="sheet-col8  sheet-row3"><input class="sheet-value" type="text" name="attr_hitloc2_dodge" value="0"/></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row4"><input class="value_full" type="text" name="attr_hitloc3_roll" value="7-9"/></div>
-					<div class="sheet-col2  sheet-row4"><input class="full" type="text" name="attr_hitloc3" value="Abdomen"/></div>
-					<div class="sheet-col3  sheet-row4"><input class="full" type="text" name="attr_hitloc3_armor"/></div>
-					<div class="sheet-col4  sheet-row4"><input class="value" type="text" name="attr_hitloc3_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row4"><input class="value" type="text" name="attr_hitloc3_ap"/></div>
-					<div class="sheet-col6  sheet-row4"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row4"><input class="value" type="number" name="attr_hitloc3_ap_max"/></div>
-					<div class="sheet-col8  sheet-row4"><input class="value" type="number" name="attr_hitloc3_hp"/></div>
-					<div class="sheet-col9  sheet-row4">/</div>
-					<div class="sheet-col10 sheet-row4"><input class="value" type="number" name="attr_hitloc3_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row4"><input class="sheet-value_full" type="text" name="attr_hitloc3_roll" value="7-9"/></div>
+					<div class="sheet-col2  sheet-row4"><input class="sheet-full" type="text" name="attr_hitloc3" value="Abdomen"/></div>
+					<div class="sheet-col3  sheet-row4"><input class="sheet-full" type="text" name="attr_hitloc3_armor"/></div>
+					<div class="sheet-col4  sheet-row4 sheet-armorRow">
+							<select name="attr_hitloc3_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row4"><input class="sheet-value" type="text" name="attr_hitloc3_ap"/></div>
+					<div class="sheet-col6  sheet-row4"><button type="roll" name="roll_hitloc3_ap" value="&{template:armor} {{armorTitle=@{hitloc3} (@{hitloc3_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc3_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row4"><input class="sheet-value" type="text" name="attr_hitloc3_hp"/></div>
+					<div class="sheet-col8  sheet-row4"><input class="sheet-value" type="text" name="attr_hitloc3_dodge"/></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row5"><input class="value_full" type="text" name="attr_hitloc4_roll" value="10-12"/></div>
-					<div class="sheet-col2  sheet-row5"><input class="full" type="text" name="attr_hitloc4" value="Chest"/></div>
-					<div class="sheet-col3  sheet-row5"><input class="full" type="text" name="attr_hitloc4_armor"/></div>
-					<div class="sheet-col4  sheet-row5"><input class="value" type="text" name="attr_hitloc4_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row5"><input class="value" type="text" name="attr_hitloc4_ap"/></div>
-					<div class="sheet-col6  sheet-row5"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row5"><input class="value" type="number" name="attr_hitloc4_ap_max"/></div>
-					<div class="sheet-col8  sheet-row5"><input class="value" type="number" name="attr_hitloc4_hp"/></div>
-					<div class="sheet-col9  sheet-row5">/</div>
-					<div class="sheet-col10 sheet-row5"><input class="value" type="number" name="attr_hitloc4_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row5"><input class="sheet-value_full" type="text" name="attr_hitloc4_roll" value="10-12"/></div>
+					<div class="sheet-col2  sheet-row5"><input class="sheet-full" type="text" name="attr_hitloc4" value="Chest"/></div>
+					<div class="sheet-col3  sheet-row5"><input class="sheet-full" type="text" name="attr_hitloc4_armor"/></div>
+					<div class="sheet-col4  sheet-row5 sheet-armorRow">
+							<select name="attr_hitloc4_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row5"><input class="sheet-value" type="text" name="attr_hitloc4_ap"/></div>
+					<div class="sheet-col6  sheet-row5"><button type="roll" name="roll_hitloc4_ap" value="&{template:armor} {{armorTitle=@{hitloc4} (@{hitloc4_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc4_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row5"><input class="sheet-value" type="text" name="attr_hitloc4_hp"/></div>
+					<div class="sheet-col8  sheet-row5"><input class="sheet-value" type="text" name="attr_hitloc4_dodge"/></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row6"><input class="value_full" type="text" name="attr_hitloc5_roll" value="13-15"/></div>
-					<div class="sheet-col2  sheet-row6"><input class="full" type="text" name="attr_hitloc5" value="Right Arm"/></div>
-					<div class="sheet-col3  sheet-row6"><input class="full" type="text" name="attr_hitloc5_armor"/></div>
-					<div class="sheet-col4  sheet-row6"><input class="value" type="text" name="attr_hitloc5_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row6"><input class="value" type="text" name="attr_hitloc5_ap"/></div>
-					<div class="sheet-col6  sheet-row6"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row6"><input class="value" type="number" name="attr_hitloc5_ap_max"/></div>
-					<div class="sheet-col8  sheet-row6"><input class="value" type="number" name="attr_hitloc5_hp"/></div>
-					<div class="sheet-col9  sheet-row6">/</div>
-					<div class="sheet-col10 sheet-row6"><input class="value" type="number" name="attr_hitloc5_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row6"><input class="sheet-value_full" type="text" name="attr_hitloc5_roll" value="13-15"/></div>
+					<div class="sheet-col2  sheet-row6"><input class="sheet-full" type="text" name="attr_hitloc5" value="Right Arm"/></div>
+					<div class="sheet-col3  sheet-row6"><input class="sheet-full" type="text" name="attr_hitloc5_armor"/></div>
+					<div class="sheet-col4  sheet-row6 sheet-armorRow">
+							<select name="attr_hitloc5_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row6"><input class="sheet-value" type="text" name="attr_hitloc5_ap"/></div>
+					<div class="sheet-col6  sheet-row6"><button type="roll" name="roll_hitloc5_ap" value="&{template:armor} {{armorTitle=@{hitloc5} (@{hitloc5_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc5_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row6"><input class="sheet-value" type="text" name="attr_hitloc5_hp"/></div>
+					<div class="sheet-col8  sheet-row6"><input class="sheet-value" type="text" name="attr_hitloc5_dodge"/></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row7"><input class="value_full" type="text" name="attr_hitloc6_roll" value="16-18"/></div>
-					<div class="sheet-col2  sheet-row7"><input class="full" type="text" name="attr_hitloc6" value="Left Arm"/></div>
-					<div class="sheet-col3  sheet-row7"><input class="full" type="text" name="attr_hitloc6_armor"/></div>
-					<div class="sheet-col4  sheet-row7"><input class="value" type="text" name="attr_hitloc6_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row7"><input class="value" type="text" name="attr_hitloc6_ap"/></div>
-					<div class="sheet-col6  sheet-row7"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row7"><input class="value" type="number" name="attr_hitloc6_ap_max"/></div>
-					<div class="sheet-col8  sheet-row7"><input class="value" type="number" name="attr_hitloc6_hp"/></div>
-					<div class="sheet-col9  sheet-row7">/</div>
-					<div class="sheet-col10 sheet-row7"><input class="value" type="number" name="attr_hitloc6_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row7"><input class="sheet-value_full" type="text" name="attr_hitloc6_roll" value="16-18"/></div>
+					<div class="sheet-col2  sheet-row7"><input class="sheet-full" type="text" name="attr_hitloc6" value="Left Arm"/></div>
+					<div class="sheet-col3  sheet-row7"><input class="sheet-full" type="text" name="attr_hitloc6_armor"/></div>
+					<div class="sheet-col4  sheet-row7 sheet-armorRow">
+							<select name="attr_hitloc6_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row7"><input class="sheet-value" type="text" name="attr_hitloc6_ap"/></div>
+					<div class="sheet-col6  sheet-row7"><button type="roll" name="roll_hitloc6_ap" value="&{template:armor} {{armorTitle=@{hitloc6} (@{hitloc6_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc6_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row7"><input class="sheet-value" type="text" name="attr_hitloc6_hp"/></div>
+					<div class="sheet-col8  sheet-row7"><input class="sheet-value" type="text" name="attr_hitloc6_dodge"/></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row8"><input class="value_full" type="text" name="attr_hitloc7_roll" value="19-20"/></div>
-					<div class="sheet-col2  sheet-row8"><input class="full" type="text" name="attr_hitloc7" value="Head"/></div>
-					<div class="sheet-col3  sheet-row8"><input class="full" type="text" name="attr_hitloc7_armor"/></div>
-					<div class="sheet-col4  sheet-row8"><input class="value" type="text" name="attr_hitloc7_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row8"><input class="value" type="text" name="attr_hitloc7_ap"/></div>
-					<div class="sheet-col6  sheet-row8"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row8"><input class="value" type="number" name="attr_hitloc7_ap_max"/></div>
-					<div class="sheet-col8  sheet-row8"><input class="value" type="number" name="attr_hitloc7_hp"/></div>
-					<div class="sheet-col9  sheet-row8">/</div>
-					<div class="sheet-col10 sheet-row8"><input class="value" type="number" name="attr_hitloc7_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row8"><input class="sheet-value_full" type="text" name="attr_hitloc7_roll" value="19-20"/></div>
+					<div class="sheet-col2  sheet-row8"><input class="sheet-full" type="text" name="attr_hitloc7" value="Head"/></div>
+					<div class="sheet-col3  sheet-row8"><input class="sheet-full" type="text" name="attr_hitloc7_armor"/></div>
+					<div class="sheet-col4  sheet-row8 sheet-armorRow">
+							<select name="attr_hitloc7_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row8"><input class="sheet-value" type="text" name="attr_hitloc7_ap"/></div>
+					<div class="sheet-col6  sheet-row8"><button type="roll" name="roll_hitloc7_ap" value="&{template:armor} {{armorTitle=@{hitloc7} (@{hitloc7_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc7_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row8"><input class="sheet-value" type="text" name="attr_hitloc7_hp"/></div>
+					<div class="sheet-col8  sheet-row8"><input class="sheet-value" type="text" name="attr_hitloc7_dodge"/></div>
 				</div>
-				<div  class="sheet-col10 sheet-row10 sheet-hitLocationsWrapper">
-					<div class="sheet-col1  sheet-row9"><input class="value_full" type="text" name="attr_hitloc8_roll"/></div>
-					<div class="sheet-col2  sheet-row9"><input class="full" type="text" name="attr_hitloc8"/></div>
-					<div class="sheet-col3  sheet-row9"><input class="full" type="text" name="attr_hitloc8_armor"/></div>
-					<div class="sheet-col4  sheet-row9"><input class="value" type="text" name="attr_hitloc8_enc" value="0"/></div>
-					<div class="sheet-col5  sheet-row9"><input class="value" type="text" name="attr_hitloc8_ap"/></div>
-					<div class="sheet-col6  sheet-row9"><input class="divider" type="text" value="/" disabled/></div>
-					<div class="sheet-col7  sheet-row9"><input class="value" type="number" name="attr_hitloc8_ap_max"/></div>
-					<div class="sheet-col8  sheet-row9"><input class="value" type="number" name="attr_hitloc8_hp"/></div>
-					<div class="sheet-col9  sheet-row9">/</div>
-					<div class="sheet-col10 sheet-row9"><input class="value" type="number" name="attr_hitloc8_hp_max" value="Math.ceil((@{conBase}+@{sizBase})/5)" readonly/></div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row9"><input class="sheet-value_full" type="text" name="attr_hitloc8_roll"/></div>
+					<div class="sheet-col2  sheet-row9"><input class="sheet-full" type="text" name="attr_hitloc8"/></div>
+					<div class="sheet-col3  sheet-row9"><input class="sheet-full" type="text" name="attr_hitloc8_armor"/></div>
+					<div class="sheet-col4  sheet-row9 sheet-armorRow">
+							<select name="attr_hitloc8_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row9"><input class="sheet-value" type="text" name="attr_hitloc8_ap"/></div>
+					<div class="sheet-col6  sheet-row9"><button type="roll" name="roll_hitloc8_ap" value="&{template:armor} {{armorTitle=@{hitloc8} (@{hitloc8_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc8_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row9"><input class="sheet-value" type="text" name="attr_hitloc8_hp"/></div>
+					<div class="sheet-col8  sheet-row9"><input class="sheet-value" type="text" name="attr_hitloc8_dodge"/></div>
 				</div>
- 			</div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row10"><input class="sheet-value_full" type="text" name="attr_hitloc9_roll"/></div>
+					<div class="sheet-col2  sheet-row10"><input class="sheet-full" type="text" name="attr_hitloc9"/></div>
+					<div class="sheet-col3  sheet-row10"><input class="sheet-full" type="text" name="attr_hitloc9_armor"/></div>
+					<div class="sheet-col4  sheet-row10 sheet-armorRow">
+							<select name="attr_hitloc9_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row10"><input class="sheet-value" type="text" name="attr_hitloc9_ap"/></div>
+					<div class="sheet-col6  sheet-row10"><button type="roll" name="roll_hitloc8_ap" value="&{template:armor} {{armorTitle=@{hitloc9} (@{hitloc9_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc9_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row10"><input class="sheet-value" type="text" name="attr_hitloc9_hp"/></div>
+					<div class="sheet-col8  sheet-row10"><input class="sheet-value" type="text" name="attr_hitloc9_dodge"/></div>
+				</div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row11"><input class="sheet-value_full" type="text" name="attr_hitloc10_roll"/></div>
+					<div class="sheet-col2  sheet-row11"><input class="sheet-full" type="text" name="attr_hitloc10"/></div>
+					<div class="sheet-col3  sheet-row11"><input class="sheet-full" type="text" name="attr_hitloc10_armor"/></div>
+					<div class="sheet-col4  sheet-row11 sheet-armorRow">
+							<select name="attr_hitloc10_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row11"><input class="sheet-value" type="text" name="attr_hitloc10_ap"/></div>
+					<div class="sheet-col6  sheet-row11"><button type="roll" name="roll_hitloc8_ap" value="&{template:armor} {{armorTitle=@{hitloc10} (@{hitloc10_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc10_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row11"><input class="sheet-value" type="text" name="attr_hitloc10_hp"/></div>
+					<div class="sheet-col8  sheet-row11"><input class="sheet-value" type="text" name="attr_hitloc10_dodge"/></div>
+				</div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row12"><input class="sheet-value_full" type="text" name="attr_hitloc11_roll"/></div>
+					<div class="sheet-col2  sheet-row12"><input class="sheet-full" type="text" name="attr_hitloc11"/></div>
+					<div class="sheet-col3  sheet-row12"><input class="sheet-full" type="text" name="attr_hitloc11_armor"/></div>
+					<div class="sheet-col4  sheet-row12 sheet-armorRow">
+							<select name="attr_hitloc11_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row12"><input class="sheet-value" type="text" name="attr_hitloc11_ap"/></div>
+					<div class="sheet-col6  sheet-row12"><button type="roll" name="roll_hitloc8_ap" value="&{template:armor} {{armorTitle=@{hitloc11} (@{hitloc11_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc11_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row12"><input class="sheet-value" type="text" name="attr_hitloc11_hp"/></div>
+					<div class="sheet-col8  sheet-row12"><input class="sheet-value" type="text" name="attr_hitloc11_dodge"/></div>
+				</div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row13"><input class="sheet-value_full" type="text" name="attr_hitloc12_roll"/></div>
+					<div class="sheet-col2  sheet-row13"><input class="sheet-full" type="text" name="attr_hitloc12"/></div>
+					<div class="sheet-col3  sheet-row13"><input class="sheet-full" type="text" name="attr_hitloc12_armor"/></div>
+					<div class="sheet-col4  sheet-row13 sheet-armorRow">
+							<select name="attr_hitloc12_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row13"><input class="sheet-value" type="text" name="attr_hitloc12_ap"/></div>
+					<div class="sheet-col6  sheet-row13"><button type="roll" name="roll_hitloc12_ap" value="&{template:armor} {{armorTitle=@{hitloc12} (@{hitloc12_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc12_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row13"><input class="sheet-value" type="text" name="attr_hitloc12_hp"/></div>
+					<div class="sheet-col8  sheet-row13"><input class="sheet-value" type="text" name="attr_hitloc12_dodge"/></div>
+				</div>
+				<div  class="sheet-col8 sheet-row14 sheet-hitLocationsWrapper">
+					<div class="sheet-col1  sheet-row14"><input class="sheet-value_full" type="text" name="attr_hitloc13_roll"/></div>
+					<div class="sheet-col2  sheet-row14"><input class="sheet-full" type="text" name="attr_hitloc13"/></div>
+					<div class="sheet-col3  sheet-row14"><input class="sheet-full" type="text" name="attr_hitloc13_armor"/></div>
+					<div class="sheet-col4  sheet-row14 sheet-armorRow">
+							<select name="attr_hitloc13_burden" class="sheet-cellFill sheet-armorSele">
+								<option value="0" selected><span nodata-i18n="No Armor">No Armor</span></option>
+								<option value="1"><span nodata-i18n="Light">Light</span></option>
+								<option value="2"><span nodata-i18n="Moderate">Moderate</span></option>
+								<option value="3"><span nodata-i18n="Cumbersome">Cumbersome</span></option>
+							</select>
+					</div>					
+					<div class="sheet-col5  sheet-row14"><input class="sheet-value" type="text" name="attr_hitloc13_ap"/></div>
+					<div class="sheet-col6  sheet-row14"><button type="roll" name="roll_hitloc8_ap" value="&{template:armor} {{armorTitle=@{hitloc13} (@{hitloc13_armor})}} {{type=[[1]]}} {{deflect=[[@{hitloc13_ap}]]}}"></button></div>
+					<div class="sheet-col7  sheet-row14"><input class="sheet-value" type="text" name="attr_hitloc13_hp"/></div>
+					<div class="sheet-col8  sheet-row14"><input class="sheet-value" type="text" name="attr_hitloc13_dodge"/></div>
+				</div>
+			</div>
 			<!-- Armor -->
 			<br>
 			<div class="sheet-fullDivider sheet-centerText">
@@ -589,7 +716,8 @@
 				  <input name="attr_skillTotal" class="sheet-text_input sheet-2digits sheet-col8" type="text" readonly="" value="0"><button  type="roll" class="sheet-col9" style="margin-right: 0px; margin-left: 0px;"  name="roll_meleeWpn" value="@{melee_value}"></button>
 								<input name="attr_fumbleRoll" type="hidden" value="&{template:default} {{msg=Hi there}}">
 
-								<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/5)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d100]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{damagebonus}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{damagebonus}]]}} {{mntTogVal=[[@{mntDbToggle}]]}} {{mntDamage=[[@{wpn_damage}+@{mountDB}]]}} {{mntCrit=[[@{wpn_damage}+@{wpn_damage}+@{mountDB}]]}}</textarea>
+								<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/5)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d100]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{damagebonus}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{damagebonus}]]}} {{mntTogVal=[[@{mntDbToggle}]]}} {{mntDamage=[[@{wpn_damage}+@{mountDB}]]}} {{mntCrit=[[@{wpn_damage}+@{wpn_damage}+@{mountDB}]]}}</textarea> 
+<!-- Test for Melee Fumbles		<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/5)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d2+98]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{damagebonus}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{damagebonus}]]}} {{mntTogVal=[[@{mntDbToggle}]]}} {{mntDamage=[[@{wpn_damage}+@{mountDB}]]}} {{mntCrit=[[@{wpn_damage}+@{wpn_damage}+@{mountDB}]]}}  {{rollname=[Roll Fumble](~summonFumble)}}</textarea>-->
 
 
 				  <input name="attr_wpn_damage" class="sheet-text_input  sheet-centerText sheet-cellFill sheet-col10" type="text">
@@ -706,13 +834,13 @@
 							<div class="sheet-gearDivider sheet-centerText">
 								<div class="sheet-header2" nodata-i18n="Equipment-Carried">Equipment Carried</div>
 							</div>
-							<div class="sheet-defaultTextarea bold" nodata-i18n="Equipment-Carried">Equipment Carried</div>
+							<div class="sheet-defaultTextarea sheet-bold" nodata-i18n="Equipment-Carried">Equipment Carried</div>
 							<textarea class="sheet-equipment" name="attr_equipmentCarried" ></textarea>
-							<div class="sheet-defaultTextarea bold" nodata-i18n="Other-Equipment">Other Equipment</div>
+							<div class="sheet-defaultTextarea sheet-bold" nodata-i18n="Other-Equipment">Other Equipment</div>
 							<textarea class="sheet-equipment" name="attr_otherEquipment" ></textarea>
 							<br>
 							<div class="sheet-gearDivider sheet-centerText">
-								<div class="sheet-header2" nodata-i18n="Saddle-Horse">Saddle Horse</div>
+								<div class="sheet-header2 " nodata-i18n="Saddle-Horse">Saddle Horse</div>
 							</div>
 							<br>
 							<div class="sheet-horseWrapper">
@@ -722,7 +850,7 @@
 								</div>
 								<div class="horseStatWrapper sheet-marginT10">
 
-										<span class="sheet-centerText sheet-bottCell bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
+										<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
 										<input type="text"  name="attr_horse_con" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/>
 										<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col3 sheet-row1" nodata-i18n="STR">STR</span>
 										<input type="text" name="attr_horse_str"  value="0" class="sheet-col4 sheet-row1 sheet-char_values"/>
@@ -753,7 +881,7 @@
 										</div>
 										<div>
 											<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-											<input name="attr_horseWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx4" title="POWx4" class="sheet-text_roll POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{horse_pow}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button><button  type="roll" name="roll_horseMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_horseMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
+											<input name="attr_horseWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_horseMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_horseMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
 										</div>
 									</div>
 
@@ -814,18 +942,18 @@
 
 			<div style="width: 38%;margin: auto;">
 				<div class="sheet-magicStatsWrapper">
-					<span class="sheet-row1 sheet-mpLabel" nodata-i18n="Magic-Points">Magic points</span>
-					<span class="sheet-row1 sheet-spellLabel" nodata-i18n="Spells">Spells</span>
-					 <div class="sheet-row2 sheet-col1 sheet-tableHdr sheet-centerText" nodata-i18n="Cur">Cur.</div>
+					<span class="sheet-row1 sheet-mpLabel sheet-bold" nodata-i18n="Magic-Points">Magic points</span>
+					<span class="sheet-row1 sheet-spellLabel sheet-bold" nodata-i18n="Spells">Spells</span>
+					<div class="sheet-row2 sheet-col1 sheet-tableHdr sheet-centerText" nodata-i18n="Cur">Cur.</div>
 					<div class="sheet-row2 sheet-col2 sheet-tableHdr sheet-centerText" nodata-i18n="Max">Max.</div>
 					<div class="sheet-row2 col3 sheet-tableHdr sheet-centerText" nodata-i18n="Regen">Regen.</div>
 					<div class="sheet-row2 sheet-col4 sheet-tableHdr sheet-centerText" nodata-i18n="#Spells"># Spells</div>
 					<div class="sheet-row2 col5 sheet-tableHdr sheet-centerText" nodata-i18n="Duration">Duration</div>
 				</div>
 				<div class="sheet-magicStatsWrapper">
-					<div class="sheet-row3 sheet-col1 sheet-tableHdr sheet-centerText" ><input type="text" name="attr_curMp" class="sheet-text_input sheet-cellFill sheet-col1 sheet-centerText"/></div>
+					<div class="sheet-row3 sheet-col1 sheet-tableHdr sheet-centerText"><input type="text" name="attr_curmp" class="sheet-text_input sheet-cellFill sheet-col1 sheet-centerText"/></div>
 					<div class="sheet-row3 sheet-col2 sheet-tableHdr sheet-centerText"><input type="text" name="attr_pow" readonly="readonly" class="sheet-text_input sheet-cellFill sheet-centerText"/></div>
-					<div class="sheet-row3 col3 sheet-tableHdr sheet-centerText"><input type="text" name="attr_powRegen" readonly="readonly" class="sheet-text_input sheet-2digits sheet-centerText"/><span nodata-i18n="6-hours">/ 6 hours</span></div>
+					<div class="sheet-row3 sheet-col3 sheet-tableHdr sheet-centerText"><input type="text" name="attr_powRegen" readonly="readonly" class="sheet-text_input sheet-2digits sheet-centerText"/><span nodata-i18n="6-hours">/ 6 hours</span></div>
 					<div class="sheet-row3 sheet-col4 sheet-tableHdr sheet-centerText"><input type="text" name="attr_int" readonly="readonly" class="sheet-text_input sheet-cellFill sheet-centerText"/></div>
 					<div class="sheet-row3 sheet-col5 sheet-tableHdr sheet-centerText"><input type="text" name="attr_pow" readonly="readonly" class="sheet-text_input sheet-2digits sheet-cellFill sheet-centerText"/><span nodata-i18n="Combat-Rounds">Combat Rounds</span></div>
 				</div>
@@ -839,39 +967,45 @@
 			<div class="sheet-spellRuneStorageWrapper">
 				<div class="sheet-col1">
 					<div class="sheet-storageInscribedDivider sheet-centerText">
-						<div class="sheet-header2" nodata-i18n="Spells-Runes">Spells & Runes</div>
+						<div class="sheet-header2" nodata-i18n="Spells-Runes">Spells</div>
 					</div>
 					<div class="sheet-spellWrapper">
 						<div class="sheet-row1 sheet-col1 sheet-tableHdr" nodata-i18n="Spell-Name">Spell Name</div>
-						 <div class="sheet-row1 sheet-col2 sheet-tableHdr sheet-centerText" nodata-i18n="Source">Source</div>
-						<div class="sheet-row1 sheet-col3 sheet-tableHdr" nodata-i18n="MP-Cost">MP-Cost</div>
-						 <div class="sheet-row1 sheet-col4 sheet-tableHdr sheet-centerText" nodata-i18n="Range">Range</div>
-						<!--<div class="sheet-row1 col5 sheet-tableHdr sheet-centerText" data-i18n="Effect">Effect</div>-->
+						<div class="sheet-row1 sheet-col2 sheet-tableHdr sheet-centerText" nodata-i18n="SpellSource">Source</div>
+						<div class="sheet-row1 sheet-col3 sheet-tableHdr" nodata-i18n="SpellMP-Cost">MP</div>
+						<div class="sheet-row1 sheet-col4 sheet-tableHdr" nodata-i18n="SpellMP-Cost">Pay</div>
+						<div class="sheet-row1 sheet-col5 sheet-tableHdr sheet-centerText" nodata-i18n="SpellRange">Range</div>
+						<div class="sheet-row1 sheet-col6 sheet-tableHdr sheet-centerText" nodata-i18n="SpellDamage">DMG</div>
+						<div class="sheet-row1 sheet-col7 sheet-tableHdr sheet-centerText" nodata-i18n="SpellRoll">Cast</div>
 					</div>
 					<fieldset class="repeating_spells">
 						<div class="sheet-spellWrapper">
-							<input type="text" name="attr_spellName" class="sheet-col1 sheet-text_input sheet-cellFill  sheet-spellHgt"/>
-							<select name="attr_spellSource" class="sheet-col2" style="width: 73px; margin-bottom: 0px;">
-								<option value="Chaos" selected><span nodata-i18n="Chaos">Chaos</span></option>
-								<option value="Law"><span nodata-i18n="Law">Law</span></option>
+							<input type="text" name="attr_spellName" class="sheet-col1 sheet-text_input sheet-cellFillFully sheet-spellHgt"/>
+							<select name="attr_spellSource" class="sheet-col2" style="width: 68px; margin-bottom: 0px;">
+								<option value="Chaos" selected><span nodata-i18n="Source-Chaos">Chaos</span></option>
+								<option value="Law"><span nodata-i18n="Source-Law">Law</span></option>
+								<option value="Elemental"><span nodata-i18n="Source-Elemental">Elemental</span></option>
 							</select>
-							<input type="text" name="attr_mpCost" class="sheet-col3 sheet-text_input sheet-cellFill sheet-2digits sheet-centerText  spellHgt"/>
-							<select name="attr_spellRange" class="sheet-col4" style="width: 73px; margin-bottom: 0px;">
+							<input type="text" name="attr_mpcost" class="sheet-col3 sheet-text_input sheet-cellFill sheet-2digitsSmall sheet-centerText spellHgt"/>
+							<button type="action" name="act_paymp">$</button>
+							<select name="attr_spellRange" class="sheet-col5" style="width: 58px; margin-bottom: 0px;">
 								<option value="Sight" selected><span nodata-i18n="Sight">Sight</span></option>
 								<option value="Touch"><span nodata-i18n="Touch">Touch</span></option>
 							</select>
+							<input class="sheet-col6" type="text" style="width: 58px; margin-bottom: 0px;" name="attr_spellDamage" value="0"/>
+							<button type="roll" class="sheet-col7" name="act_spellDamage" value="&{template:Roll} {{skillModVal=[[(@{pow}*5+?{Mod.|0})]]}}  {{crit=[[round(([[(@{pow}*5+?{Mod.|0})]])/5)+1]]}} {{success=[[(@{pow}*5+?{Mod.|0})]]}} {{roll=[[1d100]]}} {{weapon=@{character_name} casts}} {{skill=@{spellName} (@{spellSource})}} {{type=[[1]]}} {{impale=[[0]]}} {{damage=[[@{spellDamage}]]}} {{critdamage=[[@{spellDamage}+@{spellDamage}]]}} {{mntTogVal=[[0}]]}}  {{rollname=[Roll Fumble](~summonFumble)}}"></button>
 						</div>
 						<div><textarea class="sheet-marginT10 sheet-spellEffect" name="attr_spellEffect"></textarea></div>
 					</fieldset>
 				</div>
 				<div class="sheet-col2">
 					<div class="sheet-storageInscribedDivider sheet-centerText">
-						<div class="sheet-header2" nodata-i18n="MP-Storage">MP Storage</div>
+						<div class="sheet-header2" nodata-i18n="Spell-Storage">Spell Storage</div>
 					</div>
 					<div class="sheet-mpStorageWrapper">
-						   <div class="sheet-row1 sheet-col1" nodata-i18n="Location-Item">Location / Item</div>
-						   <div class="sheet-row1  sheet-col2" nodata-i18n="Cur">Cur.</div>
-						   <div class="sheet-row1 sheet-col3" nodata-i18n="Max">Max.</div>
+						   <div class="sheet-row1 sheet-col1 sheet-bold" nodata-i18n="Location-Item">Location / Item</div>
+						   <div class="sheet-row1 sheet-col2 sheet-bold" nodata-i18n="Cur">Cur.</div>
+						   <div class="sheet-row1 sheet-col3 sheet-bold" nodata-i18n="Max">Max.</div>
 					</div>
 
 					<fieldset class="repeating_mpStorage">
@@ -883,45 +1017,144 @@
 					</fieldset>
 					<br>
 					<div class="sheet-storageInscribedDivider sheet-centerText">
-						<div class="sheet-header2" nodata-i18n="Inscribed-Runes">Inscribed Runes</div>
-					</div>
-					<div class="sheet-runeWrapper">
-						<div class="sheet-row1 sheet-col1 sheet-tableHdr" nodata-i18n="Name">Name</div>
-						<div class="sheet-row1 sheet-col2 sheet-tableHdr sheet-centerText" nodata-i18n="Source">Source</div>
-						<div class="sheet-row1 sheet-col3 sheet-tableHdr" nodata-i18n="MP">MP</div>
-						<div class="sheet-row1 sheet-col4 sheet-tableHdr sheet-centerText" nodata-i18n="Range">Range</div>
-						<div class="sheet-row1 sheet-col5 sheet-tableHdr sheet-centerText" nodata-i18n="Duration">Dur.</div>
-						<div class="sheet-row1 sheet-col6 sheet-tableHdr sheet-centerText" nodata-i18n="Location">Location</div>
+						<div class="sheet-header2" nodata-i18n="Grimoires">Grimoires</div>
 					</div>
 					<fieldset class="repeating_runes">
-						<div class="sheet-runeWrapper">
-							<input type="text" name="attr_runeName" class="sheet-col1 sheet-text_input sheet-cellFill sheet-spellHgt"/>
-							<select name="attr_runeSource" class="sheet-col2 sheet-cellFill">
+						<div class="sheet-row1 sheet-bold" nodata-i18n="Tome">Tome<input type="text" name="attr_tome_name" class="sheet-text_input sheet-horseName"/></div>
+						<div class="sheet-grimWrapper">
+							<div class="sheet-row2 sheet-col1 sheet-tableHdr" nodata-i18n="Name">Spell Name</div>
+							<div class="sheet-row2 sheet-col2 sheet-tableHdr sheet-centerText" nodata-i18n="Source">Source</div>
+							<div class="sheet-row2 sheet-col3 sheet-tableHdr" nodata-i18n="MP">MP</div>
+							<div class="sheet-row2 sheet-col4 sheet-tableHdr sheet-centerText" nodata-i18n="Range">Range</div>
+							<div class="sheet-row2 sheet-col5 sheet-tableHdr sheet-centerText" nodata-i18n="Location">Location</div>
+						</div>
+						<div class="sheet-grimWrapper">
+							<input type="text" name="attr_grimSpellName" class="sheet-col1 sheet-text_input sheet-cellFillFully sheet-spellHgt"/>
+							<select name="attr_grimSource" class="sheet-col2 sheet-cellFill">
 								<option value="Chaos" selected><span nodata-i18n="Chaos">Chaos</span></option>
 								<option value="Law"><span nodata-i18n="Law">Law</span></option>
+								<option value="Elemental"><span nodata-i18n="Source-Elemental">Elemental</span></option>
 							</select>
-							<input type="text" name="attr_mpCost" class="sheet-col3 sheet-text_input sheet-cellFill sheet-centerText sheet-spellHgt"/>
-							<select name="attr_spellRange" class="sheet-col4 sheet-cellFill">
+							<input type="text" name="attr_grimMpCost" class="sheet-col3 sheet-text_input sheet-cellFill sheet-centerText sheet-spellHgt"/>
+							<select name="attr_grimSpellRange" class="sheet-col4 sheet-cellFill">
 								<option value="Sight"><span nodata-i18n="Barrier">Barrier</span></option>
 								<option value="Sight"><span nodata-i18n="Enclosure">Enclosure</span></option>
 								<option value="Sight"><span nodata-i18n="Self">Self</span></option>
 								<option value="Touch" selected><span nodata-i18n="Touch">Touch</span></option>
 							</select>
-							<input type="text" name="attr_runeDuration" class="sheet-col5 sheet-text_input sheet-cellFill sheet-spellHgt"/>
-							<input type="text" name="attr_runeLocation" class="sheet-col6 sheet-text_input sheet-cellFill sheet-spellHgt"/>
+							<!-- <input type="text" name="attr_grimLocation" class="sheet-col5 sheet-text_input sheet-cellFill sheet-spellHgt"/> -->
+							<select name="attr_grimLocation" class="sheet-col5 sheet-cellFill">
+								<option value="Stored"><span nodata-i18n="Stored">Stored</span></option>
+								<option value="Memorized" selected><span nodata-i18n="Memorized">Memorized</span></option>
+							</select>
 						</div>
-						<div><textarea class="sheet-spellEffect sheet-marginT10" name="attr_runeEffect"></textarea></div>
+						<div><textarea class="sheet-spellEffect sheet-marginT2" name="attr_grimEffect" placeholder="Effect of Spell One"></textarea></div>
+						<div class="sheet-grimWrapper">
+							<input type="text" name="attr_grimSpellName2" class="sheet-col1 sheet-text_input sheet-cellFillFully sheet-spellHgt"/>
+							<select name="attr_grimSource2" class="sheet-col2 sheet-cellFill">
+								<option value="Chaos" selected><span nodata-i18n="Chaos">Chaos</span></option>
+								<option value="Law"><span nodata-i18n="Law">Law</span></option>
+								<option value="Elemental"><span nodata-i18n="Source-Elemental">Elemental</span></option>
+							</select>
+							<input type="text" name="attr_grimMpCost2" class="sheet-col3 sheet-text_input sheet-cellFill sheet-centerText sheet-spellHgt"/>
+							<select name="attr_grimSpellRange2" class="sheet-col4 sheet-cellFill">
+								<option value="Sight"><span nodata-i18n="Barrier">Barrier</span></option>
+								<option value="Sight"><span nodata-i18n="Enclosure">Enclosure</span></option>
+								<option value="Sight"><span nodata-i18n="Self">Self</span></option>
+								<option value="Touch" selected><span nodata-i18n="Touch">Touch</span></option>
+							</select>
+							<select name="attr_grimLocation2" class="sheet-col5 sheet-cellFill">
+								<option value="Stored"><span nodata-i18n="Stored">Stored</span></option>
+								<option value="Memorized" selected><span nodata-i18n="Memorized">Memorized</span></option>
+							</select>
+						</div>
+						<div><textarea class="sheet-spellEffect sheet-marginT2" name="attr_gimEffect2" placeholder="Effect of Spell Two"></textarea></div>
+						<div class="sheet-grimWrapper">
+							<input type="text" name="attr_grimSpellName3" class="sheet-col1 sheet-text_input sheet-cellFillFully sheet-spellHgt"/>
+							<select name="attr_grimSource3" class="sheet-col2 sheet-cellFill">
+								<option value="Chaos" selected><span nodata-i18n="Chaos">Chaos</span></option>
+								<option value="Law"><span nodata-i18n="Law">Law</span></option>
+								<option value="Elemental"><span nodata-i18n="Source-Elemental">Elemental</span></option>
+							</select>
+							<input type="text" name="attr_grimMpCost3" class="sheet-col3 sheet-text_input sheet-cellFill sheet-centerText sheet-spellHgt"/>
+							<select name="attr_grimSpellRange3" class="sheet-col4 sheet-cellFill">
+								<option value="Sight"><span nodata-i18n="Barrier">Barrier</span></option>
+								<option value="Sight"><span nodata-i18n="Enclosure">Enclosure</span></option>
+								<option value="Sight"><span nodata-i18n="Self">Self</span></option>
+								<option value="Touch" selected><span nodata-i18n="Touch">Touch</span></option>
+							</select>
+							<select name="attr_grimLocation3" class="sheet-col5 sheet-cellFill">
+								<option value="Stored"><span nodata-i18n="Stored">Stored</span></option>
+								<option value="Memorized" selected><span nodata-i18n="Memorized">Memorized</span></option>
+							</select>
+						</div>
+						<div><textarea class="sheet-spellEffect sheet-marginT2" name="attr_gimEffect3" placeholder="Effect of Spell Three"></textarea></div>
+						<div class="sheet-grimWrapper">
+							<input type="text" name="attr_grimSpellName4" class="sheet-col1 sheet-text_input sheet-cellFillFully sheet-spellHgt"/>
+							<select name="attr_grimSource4" class="sheet-col2 sheet-cellFill">
+								<option value="Chaos" selected><span nodata-i18n="Chaos">Chaos</span></option>
+								<option value="Law"><span nodata-i18n="Law">Law</span></option>
+								<option value="Elemental"><span nodata-i18n="Source-Elemental">Elemental</span></option>
+							</select>
+							<input type="text" name="attr_grimMpCost4" class="sheet-col3 sheet-text_input sheet-cellFill sheet-centerText sheet-spellHgt"/>
+							<select name="attr_grimSpellRange4" class="sheet-col4 sheet-cellFill">
+								<option value="Sight"><span nodata-i18n="Barrier">Barrier</span></option>
+								<option value="Sight"><span nodata-i18n="Enclosure">Enclosure</span></option>
+								<option value="Sight"><span nodata-i18n="Self">Self</span></option>
+								<option value="Touch" selected><span nodata-i18n="Touch">Touch</span></option>
+							</select>
+							<select name="attr_grimLocation4" class="sheet-col5 sheet-cellFill">
+								<option value="Stored"><span nodata-i18n="Stored">Stored</span></option>
+								<option value="Memorized" selected><span nodata-i18n="Memorized">Memorized</span></option>
+							</select>
+						</div>
+						<div><textarea class="sheet-spellEffect sheet-marginT2" name="attr_gimEffect4" placeholder="Effect of Spell Four"></textarea></div>
+						<div class="sheet-grimWrapper">
+							<input type="text" name="attr_grimSpellName5" class="sheet-col1 sheet-text_input sheet-cellFill sheet-spellHgt"/>
+							<select name="attr_grimSource5" class="sheet-col2 sheet-cellFill">
+								<option value="Chaos" selected><span nodata-i18n="Chaos">Chaos</span></option>
+								<option value="Law"><span nodata-i18n="Law">Law</span></option>
+								<option value="Elemental"><span nodata-i18n="Source-Elemental">Elemental</span></option>
+							</select>
+							<input type="text" name="attr_grimMpCost5" class="sheet-col3 sheet-text_input sheet-cellFillFully sheet-centerText sheet-spellHgt"/>
+							<select name="attr_grimSpellRange5" class="sheet-col4 sheet-cellFill">
+								<option value="Sight"><span nodata-i18n="Barrier">Barrier</span></option>
+								<option value="Sight"><span nodata-i18n="Enclosure">Enclosure</span></option>
+								<option value="Sight"><span nodata-i18n="Self">Self</span></option>
+								<option value="Touch" selected><span nodata-i18n="Touch">Touch</span></option>
+							</select>
+							<select name="attr_grimLocation5" class="sheet-col5 sheet-cellFill">
+								<option value="Stored"><span nodata-i18n="Stored">Stored</span></option>
+								<option value="Memorized" selected><span nodata-i18n="Memorized">Memorized</span></option>
+							</select>
+						</div>
+						<div><textarea class="sheet-spellEffect sheet-marginT2" name="attr_gimEffect4" placeholder="Effect of Spell Five"></textarea></div>
+						<div class="sheet-grimWrapper">
+							<input type="text" name="attr_grimSpellName6" class="sheet-col1 sheet-text_input sheet-cellFillFully sheet-spellHgt"/>
+							<select name="attr_grimSource6" class="sheet-col2 sheet-cellFill">
+								<option value="Chaos" selected><span nodata-i18n="Chaos">Chaos</span></option>
+								<option value="Law"><span nodata-i18n="Law">Law</span></option>
+								<option value="Elemental"><span nodata-i18n="Source-Elemental">Elemental</span></option>
+							</select>
+							<input type="text" name="attr_grimMpCost6" class="sheet-col3 sheet-text_input sheet-cellFill sheet-centerText sheet-spellHgt"/>
+							<select name="attr_grimSpellRange6" class="sheet-col4 sheet-cellFill">
+								<option value="Sight"><span nodata-i18n="Barrier">Barrier</span></option>
+								<option value="Sight"><span nodata-i18n="Enclosure">Enclosure</span></option>
+								<option value="Sight"><span nodata-i18n="Self">Self</span></option>
+								<option value="Touch" selected><span nodata-i18n="Touch">Touch</span></option>
+							</select>
+							<select name="attr_grimLocation6" class="sheet-col5 sheet-cellFill">
+								<option value="Stored"><span nodata-i18n="Stored">Stored</span></option>
+								<option value="Memorized" selected><span nodata-i18n="Memorized">Memorized</span></option>
+							</select>
+						</div>
+						<div><textarea class="sheet-spellEffect sheet-marginT2" name="attr_gimEffect5" placeholder="Effect of Spell Six"></textarea></div>
 					</fieldset>
-
-
-
 				</div>
-
-
 			</div>
 
 			<div class="sheet-fullDivider sheet-centerText">
-				<div class="sheet-header2" nodata-i18n="Bound-Demons-Elementals">Bound Demons & Elementals</div>
+				<div class="sheet-header2" nodata-i18n="Bound-LesserDemons-Elementals">Lesser Demons & Elementals</div>
 			</div>
 			<div class="sheet-demonsWrapper">
 				<div class="sheet-col1">
@@ -970,7 +1203,12 @@
 									</div>
 									<div>
 										<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-										<input name="attr_demonWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx4" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{demon_pow}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button><button  type="roll" name="roll_demonMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
+<!-- 										<input name="attr_demonWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx4" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{demon_pow}*4]]}}"><span nodata-i18n="POWx4">POWx4</span>
+
+										<input name="attr_demonWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><span class="sheet-bold" nodata-i18n="MP">MPagain</span><input name="attr_mountMP" class="sheet-text_input sheet-armorRow sheet-2digits" type="text" value="0">
+										</button><button  type="roll" name="roll_demonMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
+-->
+										<input name="attr_demonWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_demonMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
 									</div>
 								</div>
 								<br>	
@@ -987,7 +1225,8 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text">
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/5)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 									<textarea class="sheet-abilityEffect" name="attr_abilityEffect"></textarea>
@@ -1024,8 +1263,6 @@
 								</fieldset>
 								<br>
 					</div>
-<!--				</div>	
--->				
 				
 					<div class="sheet-demonWrapper sheet-marginT10">
 							<div>
@@ -1070,7 +1307,7 @@
 									</div>
 									<div>
 										<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-										<input name="attr_demonWounds3" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx42" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{demon_pow3}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button><button  type="roll" name="roll_demonMjrWnd3" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWnd3" class="sheet-char_values" type="text" readonly="readonly" value="0">
+										<input name="attr_demonWounds3" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_demonMjrWnd3" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWnd3" class="sheet-char_values" type="text" readonly="readonly" value="0">
 									</div>
 								</div>
 								<br>	
@@ -1087,7 +1324,7 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text">
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/5)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 									<textarea class="sheet-abilityEffect" name="attr_abilityEffect"></textarea>
@@ -1125,11 +1362,9 @@
 								<br>
 					</div>
 				</div>
-		
-				
 				</div><!-- sheet-col1 end-->
+				
 				<div class="sheet-col2">
-
 
 					<div class="sheet-demonWrapper sheet-marginT10">
 							<div>
@@ -1175,7 +1410,7 @@
 									</div>
 									<div>
 										<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-										<input name="attr_demonWounds2" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx42" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{demon_pow2}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button><button  type="roll" name="roll_demonMjrWnd2" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWnd2" class="sheet-char_values" type="text" readonly="readonly" value="0">
+										<input name="attr_demonWounds2" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_demonMjrWnd2" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWnd2" class="sheet-char_values" type="text" readonly="readonly" value="0">
 									</div>
 								</div>
 								<br>	
@@ -1192,7 +1427,7 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text">
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/5)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 									<textarea class="sheet-abilityEffect" name="attr_abilityEffect"></textarea>
@@ -1229,9 +1464,6 @@
 								</fieldset>
 								<br>
 					</div>
-<!--				</div>
--->
-				
 				
 					<div class="sheet-demonWrapper sheet-marginT10">
 							<div>
@@ -1277,7 +1509,7 @@
 									</div>
 									<div>
 										<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-										<input name="attr_demonWoundsNYD" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx42" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{demon_powNYD}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button><button  type="roll" name="roll_demonMjrWndNYD" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWndNYD" class="sheet-char_values" type="text" readonly="readonly" value="0">
+										<input name="attr_demonWoundsNYD" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_demonMjrWndNYD" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonMjrWndNYD" class="sheet-char_values" type="text" readonly="readonly" value="0">
 									</div>
 								</div>
 								<br>	
@@ -1294,7 +1526,7 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text">
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/5)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 									<textarea class="sheet-abilityEffect" name="attr_abilityEffect"></textarea>
@@ -1363,7 +1595,7 @@
 		<!--- Tab 5 start -->
 		<div class="sheet-tab-content sheet-tab5">
 			<div class="sheet-fullDivider sheet-centerText">
-				<div class="sheet-header2" nodata-i18n="Bindings">Demonic/Virtuous Bindings</div>
+				<div class="sheet-header2" nodata-i18n="Bindings">Major Demon/Virtue Bindings</div>
 			</div>
 			<div class="sheet-demonsWrapper">
 				<div class="sheet-col1">
@@ -1408,7 +1640,7 @@
 							</div>
 							<div>
 								<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-								<input name="attr_demonLeftWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx42" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{demonLeftPow}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button><button  type="roll" name="roll_demonLeftMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonLeftMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
+								<input name="attr_demonLeftWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_demonLeftMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonLeftMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
 							</div>
 						</div>
 						<br>	
@@ -1422,19 +1654,33 @@
 							<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText col3"/>
-							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text">
+							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability1" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance1})]]}}  {{crit=[[round(([[(@{AbilityChance1})]])/5)+1]]}} {{success=[[(@{AbilityChance1})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 						</div>
 						<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
-						<textarea class="sheet-abilityEffect" name="attr_abilityEffect1"></textarea>
+						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect1"></textarea>
 						<div class="sheet-demonAbilities">
 							<input type="text" name="attr_demonAbility2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange2" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText col3"/>
-							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text">
+							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability2" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility2}}} {{skillModVal=[[(@{AbilityChance2})]]}}  {{crit=[[round(([[(@{AbilityChance2})]])/5)+1]]}} {{success=[[(@{AbilityChance2})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility2} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 						</div>
-						<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
-						<textarea class="sheet-abilityEffect" name="attr_abilityEffect2"></textarea>
+						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect2"></textarea>
+						<div class="sheet-demonAbilities">
+							<input type="text" name="attr_demonAbility3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
+							<input type="text" name="attr_abilityMPCost3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
+							<input type="text" name="attr_abilityRange3" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
+							<input name="attr_AbilityChance3" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability3" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility3}}} {{skillModVal=[[(@{AbilityChance3})]]}}  {{crit=[[round(([[(@{AbilityChance3})]])/5)+1]]}} {{success=[[(@{AbilityChance3})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility3} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+						</div>
+						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect3"></textarea>
+						<div class="sheet-demonAbilities">
+							<input type="text" name="attr_demonAbility4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
+							<input type="text" name="attr_abilityMPCost4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
+							<input type="text" name="attr_abilityRange4" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
+							<input name="attr_AbilityChance4" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability4" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility4}}} {{skillModVal=[[(@{AbilityChance4})]]}}  {{crit=[[round(([[(@{AbilityChance4})]])/5)+1]]}} {{success=[[(@{AbilityChance4})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility4} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+						</div>
+						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect4"></textarea>
 						<br>
+						
 						<div class="sheet-horseWeapons">
 							<div class="sheet-col2 sheet-tableHdr" nodata-i18n="Weapon">Weapon</div>
 							<div class="sheet-col3 sheet-tableHdr" nodata-i18n="%">%</div>
@@ -1550,7 +1796,7 @@
 							</div>
 							<div>
 								<span class="sheet-bold" nodata-i18n="Damage">Damage</span>
-								<input name="attr_demonRightWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_powx42" title="POWx4" class="sheet-text_roll sheet-POWx4"  value="&{template:Powx4} {{roll=[[1d100]]}} {{value=[[@{demonRightPow}*4]]}}"><span nodata-i18n="POWx4">POWx4</span></button><button  type="roll" name="roll_demonRightMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonRightMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
+								<input name="attr_demonRightWounds" class="sheet-text_input sheet-armorRow sheet-wounds" type="text" value="0"><button  type="roll" name="roll_demonRightMjrWnd" title="Roll Major Wound" class="sheet-text_roll sheet-majWndButt"  value="&{template:mjrWnd} {{roll=[[1d100]]}}"><span nodata-i18n="Major-Wound">Major Wound</span></button><input name="attr_demonRightMjrWnd" class="sheet-char_values" type="text" readonly="readonly" value="0">
 							</div>
 						</div>
 						<br>	
@@ -1564,7 +1810,7 @@
 							<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability1" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance1})]]}}  {{crit=[[round(([[(@{AbilityChance1})]])/5)+1]]}} {{success=[[(@{AbilityChance1})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability1" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance1})]]}}  {{crit=[[round(([[(@{AbilityChance1})]])/5)+1]]}} {{success=[[(@{AbilityChance1})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 
 						</div>
 						<div class="sheet-abilityEffectHdr" nodata-i18n="demonAbilityEffect">Effect</div>
@@ -1573,21 +1819,21 @@
 							<input type="text" name="attr_demonAbility2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange2" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability2" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility2}}} {{skillModVal=[[(@{AbilityChance2})]]}}  {{crit=[[round(([[(@{AbilityChance2})]])/5)+1]]}} {{success=[[(@{AbilityChance2})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility2} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability2" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility2}}} {{skillModVal=[[(@{AbilityChance2})]]}}  {{crit=[[round(([[(@{AbilityChance2})]])/5)+1]]}} {{success=[[(@{AbilityChance2})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility2} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect2"></textarea>
 						<div class="sheet-demonAbilities">
 							<input type="text" name="attr_demonAbility3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange3" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance3" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability3" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility3}}} {{skillModVal=[[(@{AbilityChance3})]]}}  {{crit=[[round(([[(@{AbilityChance3})]])/5)+1]]}} {{success=[[(@{AbilityChance3})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility3} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance3" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability3" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility3}}} {{skillModVal=[[(@{AbilityChance3})]]}}  {{crit=[[round(([[(@{AbilityChance3})]])/5)+1]]}} {{success=[[(@{AbilityChance3})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility3} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect3"></textarea>
 						<div class="sheet-demonAbilities">
 							<input type="text" name="attr_demonAbility4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange4" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance4" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability4" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility4}}} {{skillModVal=[[(@{AbilityChance4})]]}}  {{crit=[[round(([[(@{AbilityChance4})]])/5)+1]]}} {{success=[[(@{AbilityChance4})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility4} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance4" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability4" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility4}}} {{skillModVal=[[(@{AbilityChance4})]]}}  {{crit=[[round(([[(@{AbilityChance4})]])/5)+1]]}} {{success=[[(@{AbilityChance4})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility4} Roll}} {{impale=0}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect4"></textarea>
 						<br>
@@ -1678,13 +1924,13 @@
 			</div>
 
 			<div class="rollBody"> <!-- -->
-				<!--<div class="rollResult">Roll: <b>20</b> <= {{skillModVal}}</div> -->
-
+				<!--<div class="rollResult">Roll: <b>20</b> <= {{skillModVal}}</div>-->
+				
 				<div class="rollResult">Roll:{{roll}}  <= {{skillModVal}} </div>
 
 				{{#rollGreater() roll 98}}
 					{{#rollTotal() roll 100}}
-						<div class="rollResult">Please roll [Fumble] for Outcome</div> <!-- Result:Fumble -->
+						<div class="rollResult">Press [H-to-H-Fumbles] button for Outcome</div> <!-- Result:Fumble -->
 						{{#rollname}}
 							<div class="rollResult">
 								{{rollname}}
@@ -1696,7 +1942,7 @@
 							<div class="rollResult">Result:Failure</div>
 						{{/rollGreater() skillModVal 100}}
 						{{#^rollGreater() skillModVal 100}}
-							<div class="rollResult">Please roll [Fumble] for Outcome</div> <!-- Result:Fumble -->
+							<div class="rollResult">Press [H-to-H-Fumbles] button for Outcome</div> <!-- Result:Fumble -->
 						{{/^rollGreater() skillModVal 100}} 
 					{{/^rollTotal() roll 100}}
 				{{/rollGreater() roll 98}}
@@ -1917,6 +2163,9 @@
 							<span nodata-i18n="Skill-Halved">Skill halved</span>{{deflect}}
 						{{/^rollGreater() roll affect}}
 					{{/rollTotal() type 2}}
+					{{#rollTotal() type 3}}
+						<span nodata-i18n="location">Hit Location:</span>{{deflect}}
+					{{/rollTotal() type 3}}					
 				</div>
 			</div>
 		</div>
@@ -1998,7 +2247,6 @@
 	<rolltemplate class="sheet-rolltemplate-Powx4">
 		<div class="wrapper">
 
-
 			<div class="rollHeader">POW x 4</div>
 			<div style="text-align:center">
 				<img class="botDivider" src="https://raw.githubusercontent.com/Lockbox313/imagedump/master/Elric/stormbringerDivderTest2.png">
@@ -2016,7 +2264,6 @@
 			</div>
 		</div>
 	</rolltemplate>
-
 
 
 
@@ -2125,7 +2372,6 @@
 						setObj[section+"_"+id+'_strmin']=strmin;
 						setObj[section+"_"+id+'_dexmin']=dexmin;
 						setAttrs(setObj);
-
 				}
 
 				function incSkill(section,skill,value){
@@ -2153,7 +2399,6 @@
 						else{
 							addSkill(section,skill,value);
 						}
-
 
 					});
 				}
@@ -2189,7 +2434,6 @@
 						}
 					  }
 						  retId = newrowid;
-
 
 					return retId;
 				}
@@ -2241,15 +2485,19 @@
 			   getAttrs(["pow"], function(values) {
 
 					powRegen = Math.floor(parseInt(values.pow)/4);
-					setAttrs({powRegen:powRegen});
+					powFate = Math.floor(parseInt(values.pow)/5);
+					setAttrs({powRegen:powRegen, skillMod:powFate});
 			   });
 			})
 
 			on("change:dexBase change:dexMod", function() {
-			   getAttrs(["dexBase","dexMod"], function(values) {
+			   getAttrs(["dexBase","dexMod","dodgeValue"], function(values) {
 
 					dex = parseInt(values.dexBase)+parseInt(values.dexMod);
-					setAttrs({dex:dex});
+					var dodge = values.dodgeValue;
+					if (values.dodgeValue == "DEXx2")
+						dodge = dex * 2
+					setAttrs({dex:dex, dodgeValue: dodge});
 			   });
 			})
 
@@ -2307,7 +2555,7 @@
 					console.log("************ End Damage Bonus ************");
 				});
 			});
-
+/*
 			on("change:hitloc1_enc change:hitloc2_enc change:hitloc3_enc change:hitloc4_enc change:hitloc5_enc change:hitloc6_enc change:hitloc7_enc change:hitloc8_enc", function() {
 				getAttrs(["armor_penalty", "hitloc6_hp", "hitloc7_hp", "hitloc8_hp", "hitloc1_enc", "hitloc2_enc", "hitloc3_enc", "hitloc4_enc", "hitloc5_enc", "hitloc6_enc", "hitloc7_enc", "hitloc8_enc"], function(pvalue) {
 
@@ -2318,6 +2566,15 @@
 					//setAttrs({ hitloc7_hp: totalEnc, hitloc8_hp: penalty, armor_penalty: penalty});
 					console.log("total Enc value: " + totalEnc);
 					setAttrs({ armor_penalty: (-1 * penalty)});
+					console.log("************ End Armor Encumbrance ************");
+				});
+			});
+*/
+			on("change:hitloc1_burden change:hitloc2_burden change:hitloc3_burden change:hitloc4_burden change:hitloc5_burden change:hitloc6_burden change:hitloc7_burden change:hitloc8_burden", function() {
+				getAttrs(["hitloc1_burden", "hitloc2_burden", "hitloc3_burden", "hitloc4_burden", "hitloc5_burden", "hitloc6_burden", "hitloc7_burden", "hitloc8_burden"], function(pvalue) {
+
+					console.log("************ Start Armor Encumbrance ************");
+					setAttrs({ hitloc1_dodge: pvalue.hitloc1_burden, hitloc2_dodge: pvalue.hitloc2_burden, hitloc3_dodge: pvalue.hitloc3_burden, hitloc4_dodge: pvalue.hitloc4_burden, hitloc5_dodge: pvalue.hitloc5_burden, hitloc6_dodge: pvalue.hitloc6_burden, hitloc7_dodge: pvalue.hitloc7_burden, hitloc7_dodge: pvalue.hitloc7_burden });
 					console.log("************ End Armor Encumbrance ************");
 				});
 			});
@@ -2395,7 +2652,6 @@
 										setAttrs(attrsToSet);
 									}
 
-
 								});
 							});
 
@@ -2412,11 +2668,8 @@
 						let mdb =  values.repeating_horseweapons_dbtoggle;
 						let mdbStr = "";
 						if (mdb=="on"){
-
 							mdbStr = values.mountDB;
-
 						}
-
 
 						setAttrs({repeating_horseweapons_WpnDB:mdbStr});
 
@@ -2484,11 +2737,8 @@
 						let mdb =  values.repeating_demonweapons_dbtoggle;
 						let mdbStr = "";
 						if (mdb=="on"){
-
 							mdbStr = values.demonDB;
-
 						}
-
 
 						setAttrs({repeating_demonweapons_WpnDB:mdbStr});
 
@@ -2555,11 +2805,8 @@
 						let mdb =  values.repeating_demonweapons2_dbtoggle;
 						let mdbStr = "";
 						if (mdb=="on"){
-
 							mdbStr = values.demonDB2;
-
 						}
-
 
 						setAttrs({repeating_demonweapons2_WpnDB:mdbStr});
 
@@ -2578,7 +2825,6 @@
 					var wndTotal = 0;  // Variable to hold your total
 
 					for(var i = 0, len = wndData.length; i < len; i++) {
-
 						console.log("wound pts :"+wndData[i]);
 						wndTotal += parseInt(wndData[i]);
 					}
@@ -2626,11 +2872,8 @@
 						let mdb =  values.repeating_demonweapons3_dbtoggle;
 						let mdbStr = "";
 						if (mdb=="on"){
-
 							mdbStr = values.demonDB3;
-
 						}
-
 
 						setAttrs({repeating_demonweapons3_WpnDB:mdbStr});
 
@@ -2698,11 +2941,8 @@
 						let mdb =  values.repeating_demonweaponsNYD_dbtoggle;
 						let mdbStr = "";
 						if (mdb=="on"){
-
 							mdbStr = values.demonDBNYD;
-
 						}
-
 
 						setAttrs({repeating_demonweaponsNYD_WpnDB:mdbStr});
 
@@ -2746,10 +2986,6 @@
 			}
 
 
-
-
-
-
 			on("change:shieldValue change:shieldMod", function() {
 			   getAttrs(["shieldValue","shieldMod"], function(values) {
 
@@ -2782,7 +3018,6 @@
 							maxmdbStr = values.mmaxDb;
 						}
 
-
 						setAttrs({repeating_missle_wpnmdb:mdbStr});
 
 			   });
@@ -2800,7 +3035,6 @@
 						console.log("changed weapon skill to "+wpnSkill);
 						var skillVal=setSkillValues2(wpnSkill,"repeating_melee",repeatRow,skillTotal);
 						skillVal=setSkillValues2(wpnSkill,"repeating_missle",repeatRow,skillTotal);
-
 				});
 			})
 
@@ -2815,7 +3049,6 @@
 						console.log("skillWpnMod:"+skillWpnMod);
 						var skillTotal = skillValue+skillWpnMod;
 						console.log("skillTotal:"+skillTotal);
-
 
 						setAttrs({repeating_melee_skillTotal:skillTotal});
 			   });
@@ -2844,8 +3077,6 @@
 							var wpnSkill = pvalue.repeating_melee_skillName;
 							console.log("changed weapon skill to "+wpnSkill);
 							getSkillValues(wpnSkill,"repeating_Weapons",repeatRow);
-
-
 				});
 			});
 
@@ -2861,7 +3092,6 @@
 						var skillTotal = skillValue+skillWpnMod;
 						console.log("skillTotal:"+skillTotal);
 
-
 						setAttrs({repeating_missle_skillTotal:skillTotal});
 			   });
 			})
@@ -2874,8 +3104,6 @@
 							var wpnSkill = pvalue.repeating_missle_skillName;
 							console.log("changed weapon skill to "+wpnSkill);
 							getSkillValues(wpnSkill,"repeating_Weapons",repeatRow);
-
-
 				});
 			});
 
@@ -2883,7 +3111,7 @@
 			
 			//Walkthrough of repeating_bindingsLeft to recalcuate all damage bonuses (until single instance handling coded) 						
 			on('change:repeating_bindingsLeft:demonLeftStr change:repeating_bindingsLeft:demonLeftSiz change:repeating_bindingsLeft:demonLeftCon change:repeating_bindingsLeft:demonLeftWounds', () => {
-				console.log("In repeating_bindingsLeft specific");
+				console.log("In repeating_bindingsLeft recalc damage bonus");
 				getSectionIDs(`repeating_bindingsLeft`, function(idArray) {
 					// create a variable to hold all the needed attribute names
 					var fieldnames = [];
@@ -2923,18 +3151,15 @@
 								wndTotal += parseInt(wndData[j]);
 							}
 							var curHP = hp - wndTotal;
-							console.log("HP: " + hp + " wndTotal: " + wndTotal + " cur HP: " + curHP);
-
 							
+							console.log("HP: " + hp + " wndTotal: " + wndTotal + " cur HP: " + curHP);
 							console.log("Max Hit Points : " + hp + " Major Wound : " + mw + " Damage Bonus: " + dbValues[0]);
-							//setAttrs({ ["repeating_bindingsLeft_" + idArray[i] + "_demonLeftDB"] : dbValues[0] })
 							setAttrs({ 
 								["repeating_bindingsLeft_" + idArray[i] + "_demonLeftDB"] : dbValues[0],
 								["repeating_bindingsLeft_" + idArray[i] + "_demonLeftHpMax"] : hp,
 								["repeating_bindingsLeft_" + idArray[i] + "_demonLeftMjrWnd"] : mw,
 								["repeating_bindingsLeft_" + idArray[i] + "_demonLeftHpCur"] : curHP
 							})
-
 						}
 					});
 				});
@@ -2981,18 +3206,15 @@
 								wndTotal += parseInt(wndData[j]);
 							}
 							var curHP = hp - wndTotal;
-							console.log("HP: " + hp + " wndTotal: " + wndTotal + " cur HP: " + curHP);
-
 							
+							console.log("HP: " + hp + " wndTotal: " + wndTotal + " cur HP: " + curHP);
 							console.log("Max Hit Points : " + hp + " Major Wound : " + mw + " Damage Bonus: " + dbValues[0]);
-							//setAttrs({ ["repeating_bindingsRight_" + idArray[i] + "_demonRightDB"] : dbValues[0] })
 							setAttrs({ 
 								["repeating_bindingsRight_" + idArray[i] + "_demonRightDB"] : dbValues[0],
 								["repeating_bindingsRight_" + idArray[i] + "_demonRightHpMax"] : hp,
 								["repeating_bindingsRight_" + idArray[i] + "_demonRightMjrWnd"] : mw,
 								["repeating_bindingsRight_" + idArray[i] + "_demonRightHpCur"] : curHP
 							})
-
 						}
 					});
 				});
@@ -3063,10 +3285,29 @@
 					});
 				});
 			});
-		
+
+			on("clicked:repeating_spells:paymp", function(eventInfo) {
+				// Lessons learned: 
+				//    - no Capital letters in attribute names
+				//    - `repeating_spells_${rowid}_mpcost` == "repeating_spells" + ${rowid} + "mpcost"
+				//    -    notice the *backwards* apostrophes in the line above: ` vs '
+				const rowid = eventInfo.sourceAttribute.split('_')[2];
+			
+				getAttrs(["curmp", `repeating_spells_${rowid}_mpcost`], function(v) {
+					var curmpCount = parseInt(v.curmp)||0;
+					var mpSpent = parseInt(v[`repeating_spells_${rowid}_mpcost`])||0;
+					var newMp = curmpCount - mpSpent;
+				
+					//console.log("curmp: " + curmpCount + " spent: " + mpSpent + " new: " + newMp);
+					setAttrs({
+						"curmp": newMp
+					});
+				});
+			});
+
 			//Walkthrough of repeating_bindingsRight to recalcuate all damage bonuses (until single instance handling coded) 						
 			on('change:repeating_bindingsRight:dbtoggle1 change:repeating_bindingsRight:dbtoggle2 change:repeating_bindingsRight:dbtoggle3 change:repeating_bindingsRight:dbtoggle4', () => {
-				console.log("In repeating_bindingsRight whan a dbtoggle checkbox changed");
+				console.log("In repeating_bindingsRight when a dbtoggle checkbox changed");
 				getSectionIDs(`repeating_bindingsRight`, function(idArray) {
 					// create a variable to hold all the needed attribute names
 					var fieldnames = [];
@@ -3189,8 +3430,5 @@
 
 					});
 				}
-
-
-
 
 	</script>
