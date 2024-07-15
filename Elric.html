@@ -6,12 +6,14 @@
 		<input name="attr_tab1" title="Bindings" class="sheet-tab sheet-tab5" type="radio" value="5"><span  class="sheet-tabSpan"  title="Bindings"></span>
 
 		<div class="sheet-tab-content sheet-tab1"><!--- Tab 1 start -->
+<!-- Unsure of reprocussions of removing, this is commented out
 			 <div class="sheet-cdiv">
 				<input name="attr_is_config" class="sheet-HideConfig" type="checkbox" checked="checked"><span class="sheet-is-config"><span style='font-family: "pictos";'>y</span></span>
 				<div class="sheet-config" style="border-style: dotted; border-color: gray; padding: 5px; background-image: none; background-color: white;">
 
 				</div>
 			</div>
+-->
 			<br>
 			<span style="left: 122px; top: 112px; position: absolute;"><img src="https://raw.githubusercontent.com/Lockbox313/imagedump/master/Elric/chaosTest2.png"></span>
 
@@ -940,28 +942,33 @@
 		</div><!--- Tab 2 end -->
 		<div class="sheet-tab-content sheet-tab3"><!--- Tab 3 start -->
 
-			<div style="width: 38%;margin: auto;">
+			<div style="width: 54%;margin: auto;">
 				<div class="sheet-magicStatsWrapper">
 					<span class="sheet-row1 sheet-mpLabel sheet-bold" nodata-i18n="Magic-Points">Magic points</span>
 					<span class="sheet-row1 sheet-spellLabel sheet-bold" nodata-i18n="Spells">Spells</span>
-					<div class="sheet-row2 sheet-col1 sheet-tableHdr sheet-centerText" nodata-i18n="Cur">Cur.</div>
-					<div class="sheet-row2 sheet-col2 sheet-tableHdr sheet-centerText" nodata-i18n="Max">Max.</div>
-					<div class="sheet-row2 col3 sheet-tableHdr sheet-centerText" nodata-i18n="Regen">Regen.</div>
-					<div class="sheet-row2 sheet-col4 sheet-tableHdr sheet-centerText" nodata-i18n="#Spells"># Spells</div>
-					<div class="sheet-row2 col5 sheet-tableHdr sheet-centerText" nodata-i18n="Duration">Duration</div>
+					<div class="sheet-row2 sheet-col1 sheet-magicTableHdr sheet-centerText" nodata-i18n="Cur">Cur.</div>
+					<div class="sheet-row2 sheet-col2 sheet-magicTableHdr sheet-centerText" nodata-i18n="Max">Max.</div>
+					<div class="sheet-row2 sheet-col3 sheet-magicTableHdr sheet-centerText" nodata-i18n="Regen">Regen.</div>
+					<div class="sheet-row2 sheet-col4 sheet-magicTableHdr sheet-centerText" nodata-i18n="#Spells"># Spells</div>
+					<div class="sheet-row2 sheet-col5 sheet-magicTableHdr sheet-leftAlignText" nodata-i18n="Duration">Duration</div>
 				</div>
 				<div class="sheet-magicStatsWrapper">
-					<div class="sheet-row3 sheet-col1 sheet-tableHdr sheet-centerText"><input type="text" name="attr_curmp" class="sheet-text_input sheet-cellFill sheet-col1 sheet-centerText"/></div>
-					<div class="sheet-row3 sheet-col2 sheet-tableHdr sheet-centerText"><input type="text" name="attr_pow" readonly="readonly" class="sheet-text_input sheet-cellFill sheet-centerText"/></div>
-					<div class="sheet-row3 sheet-col3 sheet-tableHdr sheet-centerText"><input type="text" name="attr_powRegen" readonly="readonly" class="sheet-text_input sheet-2digits sheet-centerText"/><span nodata-i18n="6-hours">/ 6 hours</span></div>
-					<div class="sheet-row3 sheet-col4 sheet-tableHdr sheet-centerText"><input type="text" name="attr_int" readonly="readonly" class="sheet-text_input sheet-cellFill sheet-centerText"/></div>
-					<div class="sheet-row3 sheet-col5 sheet-tableHdr sheet-centerText"><input type="text" name="attr_pow" readonly="readonly" class="sheet-text_input sheet-2digits sheet-cellFill sheet-centerText"/><span nodata-i18n="Combat-Rounds">Combat Rounds</span></div>
+					<div class="sheet-row3 sheet-col1 sheet-magicTableHdr sheet-centerText"><input type="text" name="attr_curmp" class="sheet-spell_text_input sheet-bold sheet-cellFillFully sheet-centerText sheet-mediumText sheet-lightRed"/></div>
+					<div class="sheet-row3 sheet-col2 sheet-magicTableHdr sheet-centerText"><input type="text" name="attr_pow" readonly="readonly" class="sheet-spell_text_input sheet-cellFill sheet-centerText"/></div>
+					<div class="sheet-row3 sheet-col3 sheet-magicTableHdr sheet-centerText"><input type="text" name="attr_powRegen" readonly="readonly" class="sheet-spell_text_input sheet-2digits sheet-centerText"/><span nodata-i18n="6-hours">/ 6 hrs</span></div>
+					<div class="sheet-row3 sheet-col4 sheet-magicTableHdr sheet-centerText"><input type="text" name="attr_int" readonly="readonly" class="sheet-spell_text_input sheet-cellFill sheet-centerText"/></div>
+					<div class="sheet-row3 sheet-col5 sheet-magicTableHdr sheet-centerText"><input type="text" name="attr_pow" readonly="readonly" class="sheet-spell_text_input sheet-2digits sheet-cellFill sheet-centerText"/><span nodata-i18n="Combat-Rounds">Combat Rounds</span></div>
 				</div>
 			</div>
 			<div class="sheet-centerDiv sheet-marginT10">
 				<button  type="roll" class="sheet-text_roll"  name="roll_powRoll" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{pow}*5)]]}}  {{crit=[[round(([[(@{pow}*5)]])/5)+1]]}} {{success=[[(@{pow}*5)]]}} {{roll=[[1d100]]}} {{skill=Summoning Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="Summoning-Roll">Summoning  Roll</span></button><button type="roll" name="roll_summonFumble" class="sheet-text_roll" value="&{template:summonFumble} {{roll=[[1d100]]}}" nodata-i18n="Summoning-Fumble">Summoning Fumble</button><button type="roll" style="padding-top: 0px;" class="sheet-turn_order sheet-col17" title="Add to turn order" value="&{template:turnOrder} {{weapon=Spell Casting}}} {{rank=[[[[100+@{int}]] &{tracker}]]}}" ></button>
 			</div>
 			<br>
+			<div class="sheet-bold">Disclaimers:</div>
+				<div class="sheet-Text sheet-indentLeft"> Maximum Grimoires carried at a time 2</div>
+				<div class="sheet-Text sheet-indentLeft"> Memorized spells is INT/5</div>
+				<div class="sheet-Text sheet-indentLeft"> Maximum magical applications = to POW</div>
+
 
 
 			<div class="sheet-spellRuneStorageWrapper">
