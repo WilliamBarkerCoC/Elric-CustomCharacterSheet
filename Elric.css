@@ -232,7 +232,7 @@ input.sheet-divider {
 
 .sheet-magicStatsWrapper{
 	display: grid;
-    grid-template-columns:  33px 33px 78px 43px 112px;
+    grid-template-columns:  33px 33px 123px 58px 160px;
     grid-gap: 3px;
     /*grid-auto-rows: minmax(auto, auto);*/
 	width: 325px;
@@ -307,12 +307,14 @@ input.sheet-divider {
 
 .sheet-mpLabel{
 	grid-column: 1 /span 3;
+	font-size:large;
 	text-align: center;
 }
 
 
 .sheet-spellLabel{
 	grid-column: 4 /span 2;
+	font-size:large;
 	text-align: center;
 }
 
@@ -569,6 +571,14 @@ input.sheet-spellHgt {
 
 .sheet-centerText{
 		text-align:center;
+}
+
+.sheet-leftAlignText{
+	text-align:left;
+}
+
+.sheet-mediumText{
+	font-size:medium;
 }
 
 .sheet-header{
@@ -923,6 +933,15 @@ div.sheet-skills input.sheet-text_input {
 	height:26px;
 }
 
+div.sheet-skills input.sheet-spell_text_input {
+	/*height:36px;*/
+	font-size:medium;
+}
+
+input.sheet-spell_text_input {
+	/*height:36px;*/
+	font-size:medium;
+}
 div.sheet-skills {
 	padding: 1px;
 }
@@ -1078,6 +1097,12 @@ div.sheet-skills {
 	text-align:center;
 }
 
+.sheet-magicTableHdr{
+	font-size:medium;
+	font-weight:bold;
+	text-align:center;
+}
+
 .sheet-armorDice{
 	width:63px;
 	text-align:center;
@@ -1108,9 +1133,14 @@ div.sheet-skills {
     margin-right: 10px!important;
 }
 
+.sheet-indentLeft{
+	margin-left: 20px;
+}
+
 .sheet-wounds{
 	width:74px;
 }
+
 
 .sheet-POWx4{
 	margin-left:5px!important;
@@ -1563,6 +1593,9 @@ ll
 	font-family: 'Georgia';
 }
 
+.sheet-lightRed{
+	background-color:#fde8ec;
+}
 
 .sheet-rolltemplate-mjrWnd .sheet-wrapper{
     border: 1px solid black;
