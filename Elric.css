@@ -212,7 +212,7 @@ input.sheet-divider {
 
 .sheet-hitLocationsWrapper {
 	display: grid;
-	grid-template-columns: 8% 15% 18% 15% 12% 4% 11% 13%;
+	grid-template-columns: 8% 15% 18% 15% 12% 4% 11% 13% 2%;
     /* grid-template-columns: 9% 23% 23% 6% 8% 2% 8% 8% 2% 8%; */
 	/* grid-template-columns: 45px 160px 160px 40px 45px 12px 45px 45px 12px 45px;*/
     grid-gap: 0px;
