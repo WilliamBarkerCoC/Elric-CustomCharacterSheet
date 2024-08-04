@@ -5,13 +5,17 @@
 .charsheet {
 	min-width: 832px;
 	max-width: 832px;
-
+	background: #B2BEB5; /* Ash Gray */
+	color: #6082B6; /* Glaucous */
 }
 
 
 .charsheet textarea{
 	width:96%;
+	background: #D3D3D3; /* Light Gray */
+	color: #6082B6; /* Glaucous */
 }
+
 
 .charsheet button[type=roll].sheet-textButton {
     background-color: transparent;
@@ -526,7 +530,7 @@ input.sheet-spellHgt {
 
 .sheet-demonAbilities{
 	display: grid;
-    grid-template-columns: 140px 53px 98px 56px 16px;
+    grid-template-columns: 140px 53px 98px 56px 34px;
     grid-gap: 0px;
     grid-auto-rows: minmax(auto, auto);
 }
@@ -1002,7 +1006,7 @@ div.sheet-skills {
 	line-height:12px;
 	padding-top:0px;
 	padding-bottom:0px;
-
+	background: #D3D3D3; /* Light Gray */
 }
 
 .sheet-header{
@@ -1474,6 +1478,7 @@ div.repcontrol.editmode button.repcontrol_edit::before
 
 .sheet-rolltemplate-Roll{
 	font-family: 'Georgia';
+
 }
 
 
@@ -1487,7 +1492,7 @@ div.repcontrol.editmode button.repcontrol_edit::before
 
 
 .sheet-rolltemplate-Roll .sheet-flipColor{
-		background-color:black;
+		background-color:black; 
 		color:white;
 }
 
@@ -1500,11 +1505,15 @@ div.repcontrol.editmode button.repcontrol_edit::before
 
  .sheet-rolltemplate-Roll .sheet-rollResult{
 		text-align:center;
+		color: #000080; /* Navy Blue */
+		/* background-color: #D3D3D3;  Light Gray */
  }
 
 .sheet-rolltemplate-Roll .sheet-rollHeader{
 		font-size:1.2em;
 		text-align:center;
+		color: #000080; /* Navy Blue */
+		/* background-color: #D3D3D3;  Light Gray */
 }
 
 .sheet-rolltemplate-Roll .inlinerollresult.fullcrit{
@@ -1538,22 +1547,30 @@ ll
     border: 1px solid black;
     border-radius: 25px;
     padding: 5px;
-    background-color: white;
+    background-color: #E5E4E2;  /* Platinum - was white; */
+	color: #770737; /* Mulberry */
     width: 77%;
 }
 
  .sheet-rolltemplate-h2hFumble .sheet-rollResult{
 		text-align:center;
+		color: #770737; /* Mulberry */
+		/* background-color: #E5E4E2;  Platinum was #D3D3D3  Light Gray */
  }
 
 .sheet-rolltemplate-h2hFumble .sheet-rollHeader{
 		font-weight:bold ;
 		text-align:center;
+		color: #770737; /* Mulberry */
+		/* background-color: #E5E4E2; Platinum was #D3D3D3  Light Gray */
 }
 
 .sheet-rolltemplate-h2hFumble .sheet-rollBody{
 		/*background-color:white;*/
 		padding:5px 0 5px 0;
+		text-align:center;
+		color: #770737; /* Mulberry */
+		/* background-color: #E5E4E2;  Platinum was #D3D3D3  Light Gray */
 		/*border: 1px solid black;*/
 
 }
@@ -1568,6 +1585,7 @@ ll
     border-radius: 25px;
     padding: 5px;
     background-color: white;
+	color: #770737; /* Mulberry */
     width: 77%;
 }
 
@@ -1602,6 +1620,7 @@ ll
     border-radius: 25px;
     padding: 5px;
     background-color: white;
+	color: #880808; /* Blood Red */
     width: 77%;
 }
 
@@ -1632,6 +1651,7 @@ ll
     border-radius: 25px;
     padding: 5px;
     background-color: white;
+	color: #7393B3; /* Blue Gray */
     width: 77%;
 }
 
@@ -1676,6 +1696,7 @@ ll
     border-radius: 25px;
     padding: 5px;
     background-color: white;
+	color: #630330; /* Tyrian Purple */
     width: 77%;
 }
 
@@ -1720,6 +1741,7 @@ ll
     border-radius: 25px;
     padding: 5px;
     background-color: white;
+	color: #FFAC1C; /* Bright Orange */
     width: 77%;
 }
 
@@ -1768,6 +1790,7 @@ ll
     border-radius: 25px;
     padding: 5px;
     background-color: white;
+	color: #800080; /* Purple */
     width: 77%;
 }
 
