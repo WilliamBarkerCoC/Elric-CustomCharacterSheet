@@ -383,7 +383,9 @@
 								<input name="attr_shieldDamage" class="sheet-text_input sheet-armorRow sheet-armorDice sheet-cellFill" style="width: 57px;" type="text" value="0">
 							</div>
 						</div>
-						<div class="sheet-col9  sheet-row2"><button  type="roll" name="roll_shieldDamgae" title="" ></button></div>
+						<!-- <div class="sheet-col9  sheet-row2"><button  type="roll" name="roll_shieldDamgae" title="" ></button></div> -->
+						<div class="sheet-col9  sheet-row2"><button  type="roll" name="roll_shieldDamage" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{shieldToT}+@{skillMod})]]}}  {{crit=[[round(([[(@{shieldToT}+@{skillMod})]])/10)+1]]}} {{success=[[(@{shieldToT}+@{skillMod})]]}} {{roll=[[1d100]]}} {{weapon=@{ShieldType}}} {{skill=Shield}} {{type=[[1]]}} {{impale=[[0]]}} {{damage=[[@{shieldDamage}+@{damagebonus}]] Knockback}} {{critdamage=[[@{shieldDamage}+@{shieldDamage}+@{damagebonus}]] Knockback}} {{mntTogVal=[[0}]]}}  {{rollname=[Roll Fumble](~h2hfumble)}}"></button></div>
+	
 						<div class="sheet-col10  sheet-row2">
 							<div class="sheet-fillCell">
 								<input name="attr_shldHpCur" class="sheet-text_input sheet-armorRow sheet-2digits" type="text" value="0">/<input name="attr_shldHpMax" class="sheet-text_input sheet-armorRow sheet-2digits" type="text" value="0">
@@ -928,7 +930,7 @@
 										<div class="sheet-horseSkills">
 											<input name="attr_dbtoggle" class="sheet-col1 sheet-bottCell" type="checkbox">
 											<input type="text" name="attr_skill" class="sheet-text_input sheet-cellFill sheet-col2"/>
-											<input type="text" name="attr_skillValue" class="sheet-text_input sheet-cellFill sheet-centerText sheet-col3"/><button type="roll"  class="sheet-col4" name="roll_horseDamage" value="&{template:Roll} {{skillModVal=[[(@{SkillValue}+?{Mod.|0})]]}}  {{crit=[[round(([[(@{SkillValue}+?{Mod.|0})]])/10)+1]]}} {{success=[[(@{SkillValue}+?{Mod.|0})]]}} {{roll=[[1d100]]}} {{weapon=@{horse_name}}} {{skill=@{Skill}}} {{type=[[0]]}}  "></button>
+											<input type="text" name="attr_skillValue" class="sheet-text_input sheet-cellFill sheet-centerText sheet-col3"/><button type="roll"  class="sheet-col4" name="roll_horseDamage" value="&{template:Roll} {{skillModVal=[[(@{SkillValue}+?{Mod.|0})]]}}  {{crit=[[round(([[(@{SkillValue}+?{Mod.|0})]])/10)+1]]}} {{success=[[(@{SkillValue}+?{Mod.|0})]]}} {{roll=[[1d100]]}} {{weapon=@{horse_name}}} {{skill=@{horse_name}'s @{Skill}}} {{type=[[0]]}}  "></button>
 
 										</div>
 									</fieldset>
@@ -2354,6 +2356,9 @@
 									addHorseWpn("repeating_horseweapons","Bite","10","1D8", false);
 									addHorseWpn("repeating_horseweapons","Kick","20","2D8", true);
 									addHorseWpn("repeating_horseweapons","Rear & Plunge","10","2D6", true);
+									
+									//because Shield does not work with Default skill, it must be initialized to the default skill level so that the on.change executes 
+									setAttrs({shieldValue:15});
 
 									setAttrs({setupDone:1});
 						}
