@@ -1505,13 +1505,15 @@ div.repcontrol.editmode button.repcontrol_edit::before
 
  .sheet-rolltemplate-Roll .sheet-rollResult{
 		text-align:center;
-		color: #000080; /* Navy Blue */
+		color: #0096FF; /* Bright Blue */
+		/* color: #000080;  Navy Blue */
 		/* background-color: #D3D3D3;  Light Gray */
  }
 
 .sheet-rolltemplate-Roll .sheet-rollHeader{
 		font-size:1.2em;
 		text-align:center;
+		/* color: #0096FF;  Bright Blue */
 		color: #000080; /* Navy Blue */
 		/* background-color: #D3D3D3;  Light Gray */
 }
