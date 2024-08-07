@@ -2357,6 +2357,8 @@
 									addHorseWpn("repeating_horseweapons","Kick","20","2D8", true);
 									addHorseWpn("repeating_horseweapons","Rear & Plunge","10","2D6", true);
 									
+									//in order for Attributes commonly used for Token Bars to be easily found, these will be initialized here 
+									setAttrs({hpCur:0, curmp:0, mjrWnd:0, dodgeTotal:0});									
 									//because Shield does not work with Default skill, it must be initialized to the default skill level so that the on.change executes 
 									setAttrs({shieldValue:15});
 
