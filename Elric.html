@@ -28,7 +28,7 @@
 					<input name="attr_chaos" class="sheet-allgValues" type="text" value="0">
 					<div class="sheet-allgCheck">
 						<input name="attr_chaosChk" type="checkbox" value="0">
-						<button  type="roll" name="roll_chaos" class="sheet-allg_roll" value="&amp;{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{chaos})]]}}  {{crit=[[round(([[(@{chaos})]])/10)+1]]}} {{success=[[(@{chaos})]]}} {{roll=[[1d100]]}} {{skill=Chaos Roll}} {{type=0}} {{impale=0}}"><span data-i18n="Chaos">Chaos</span></button>
+						<button  type="roll" name="roll_chaos" class="sheet-allg_roll" value="&amp;{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{chaos})]]}}  {{crit=[[round(([[(@{chaos})]])/10)+1]]}} {{success=[[(@{chaos})]]}} {{roll=[[1d100]]}} {{skill=Chaos Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span data-i18n="Chaos">Chaos</span></button>
 					</div>
 					<select class="sheet-allegianceRank"  name="attr_chaosRank">
 						<option selected value=""></option>
@@ -40,7 +40,7 @@
 					<input name="attr_balance" class="sheet-allgValues" type="text" value="0">
 					<div class="sheet-allgCheck">
 						<input name="attr_balanceChk" type="checkbox">
-						<button  type="roll" name="roll_balance" class="sheet-allg_roll"  value="&amp;{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{balance})]]}}  {{crit=[[round(([[(@{balance})]])/10)+1]]}} {{success=[[(@{balance})]]}} {{roll=[[1d100]]}} {{skill=Balance Roll}} {{type=0}} {{impale=0}}"><span data-i18n="Balance">Balance</span></button>
+						<button  type="roll" name="roll_balance" class="sheet-allg_roll"  value="&amp;{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{balance})]]}}  {{crit=[[round(([[(@{balance})]])/10)+1]]}} {{success=[[(@{balance})]]}} {{roll=[[1d100]]}} {{skill=Balance Roll}}  {{type=[[0]]}} {{impale=[[0]]}}"><span data-i18n="Balance">Balance</span></button>
 					</div>
 					<select class="sheet-allegianceRank" name="attr_balanceRank">
 						<option selected value=""></option>
@@ -52,7 +52,7 @@
 					<input name="attr_law" class="sheet-allgValues" type="text" value="0">
 					<div class="sheet-allgCheck">
 						<input name="attr_lawChk" type="checkbox">
-						<button  type="roll" name="roll_law" class="sheet-allg_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{law})]]}}  {{crit=[[round(([[(@{law})]])/10)+1]]}} {{success=[[(@{law})]]}} {{roll=[[1d100]]}} {{skill=Law Roll}} {{type=0}} {{impale=0}}"><span data-i18n="Law">Law</span></button>
+						<button  type="roll" name="roll_law" class="sheet-allg_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{law})]]}}  {{crit=[[round(([[(@{law})]])/10)+1]]}} {{success=[[(@{law})]]}} {{roll=[[1d100]]}} {{skill=Law Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span data-i18n="Law">Law</span></button>
 					</div>
 					<select class="sheet-allegianceRank" name="attr_lawRank">
 						<option selected value=""></option>
@@ -83,7 +83,7 @@
 								<input name="attr_str" class="sheet-char_values" type="text" value="0">
 							</div>
 							<div class="sheet-col6 sheet-row1  sheet-bottCell sheet-statLabel2">
-								<button  type="roll" name="roll_str" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{str}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{str}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{str}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Strength Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="STR-Roll">STR Roll</span></button>
+								<button  type="roll" name="roll_str" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{str}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{str}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{str}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Strength Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span nodata-i18n="STR-Roll">STR Roll</span></button>
 							</div>
 
 							<!--Row2-->
@@ -103,7 +103,7 @@
 								<input name="attr_con" class="sheet-char_values" type="text" value="0">
 							</div>
 							<div class="sheet-col6 sheet-row2  sheet-bottCell sheet-statLabel2">
-								<button  type="roll" name="roll_con" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{con}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{con}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{con}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Constitution Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="CON-Roll">CON Roll</span></button>
+								<button  type="roll" name="roll_con" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{con}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{con}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{con}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Constitution Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span nodata-i18n="CON-Roll">CON Roll</span></button>
 							</div>
 							<!--Row3-->
 							<div class="sheet-col1 sheet-row3 sheet-bottCell">
@@ -146,7 +146,7 @@
 								<input name="attr_int" class="sheet-char_values" type="text" value="0">
 							</div>
 							<div class="sheet-col6 sheet-row4 sheet-bottCell sheet-statLabel2">
-								<button  type="roll" name="roll_idea" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{int}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{int}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{int}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Idea Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="Idea-Roll">Idea Roll</span></button>
+								<button  type="roll" name="roll_idea" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{int}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{int}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{int}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Idea Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span nodata-i18n="Idea-Roll">Idea Roll</span></button>
 							</div>
 
 							<!--Row5-->
@@ -166,7 +166,7 @@
 								<input name="attr_pow" class="sheet-char_values" type="text" value="0">
 							</div>
 							<div class="sheet-col6 sheet-row5 sheet-bottCell sheet-statLabel2">
-								<button  type="roll" class="sheet-text_roll"  name="roll_powRoll" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{pow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{pow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{pow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Luck Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="Luck-Roll">Luck Roll</span></button>
+								<button  type="roll" class="sheet-text_roll"  name="roll_powRoll" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{pow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{pow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{pow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Luck Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span nodata-i18n="Luck-Roll">Luck Roll</span></button>
 							</div>
 							<!--Row6-->
 							<div class="sheet-col1 sheet-row6 sheet-bottCell">
@@ -185,7 +185,7 @@
 								<input name="attr_dex" class="sheet-char_values" type="text" value="0">
 							</div>
 							<div class="sheet-col6 sheet-row6  sheet-bottCell sheet-statLabel2">
-								<button  type="roll" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{dex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{dex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{dex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Dexterity Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="Dexterity-Roll">Dexterity Roll</span></button>
+								<button  type="roll" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{dex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{dex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{dex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Dexterity Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span nodata-i18n="Dexterity-Roll">Dexterity Roll</span></button>
 							</div>
 							<!--Row7-->
 							<div class="sheet-col1 sheet-row7 sheet-bottCell">
@@ -204,7 +204,7 @@
 								<input name="attr_app" class="sheet-char_values" type="text" value="0">
 							</div>
 							<div class="sheet-col6 sheet-row7 sheet-bottCell sheet-statLabel2">
-								<button  type="roll" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{app}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{app}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{app}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Charisma Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="Charisma-Roll">Charisma Roll</span></button>
+								<button  type="roll" class="sheet-text_roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{app}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{app}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{app}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=Charisma Roll}} {{type=[[0]]}} {{impale=[[0]]}}"><span nodata-i18n="Charisma-Roll">Charisma Roll</span></button>
 							</div>
 
 
@@ -258,7 +258,7 @@
 						<div class="sheet-skills">
 							<input name="attr_expCheck" type="checkbox">
 							<input name="attr_skill" class="sheet-text_input sheet-skillName" type="text">
-							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll" class="sheet-skillButtons"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=0}} {{impale=0}}"></button>
+							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll" class="sheet-skillButtons"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=[[0]]}} {{impale=[[0]]}}"></button>
 						</div>
 					</fieldset>
 				</div>
@@ -267,7 +267,7 @@
 						<div class="sheet-skills">
 							<input name="attr_expCheck" type="checkbox">
 							<input name="attr_skill" class="sheet-text_input sheet-skillName" type="text">
-							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=0}} {{impale=0}}"></button>
+							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=[[0]]}} {{impale=[[0]]}}"></button>
 						</div>
 					</fieldset>
 				</div>
@@ -276,7 +276,7 @@
 						<div class="sheet-skills">
 							<input name="attr_expCheck" type="checkbox">
 							<input name="attr_skill" class="sheet-text_input sheet-skillName" type="text">
-							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=0}} {{impale=0}}"></button>
+							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=[[0]]}} {{impale=[[0]]}}"></button>
 						</div>
 					</fieldset>
 				</div>
@@ -290,7 +290,7 @@
 						<div class="sheet-skills">
 							<input name="attr_expCheck" type="checkbox">
 							<input name="attr_skill" class="sheet-text_input sheet-skillName" type="text" value="Class ">
-							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=0}} {{impale=0}}"></button>
+							<input name="attr_skillValue" class="sheet-text_input sheet-skill_values" type="text" value="0"><button  type="roll"  value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillValue}+@{skillMod})]]}}  {{crit=[[round(([[(@{skillValue}+@{skillMod})]])/10)+1]]}} {{success=[[(@{skillValue}+@{skillMod})]]}} {{roll=[[1d100]]}} {{skill=@{skill}}} {{type=[[0]]}} {{impale=[[0]]}}"></button>
 						</div>
 					</fieldset>
 				</div>
@@ -384,7 +384,7 @@
 							</div>
 						</div>
 						<!-- <div class="sheet-col9  sheet-row2"><button  type="roll" name="roll_shieldDamgae" title="" ></button></div> -->
-						<div class="sheet-col9  sheet-row2"><button  type="roll" name="roll_shieldDamage" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{shieldToT}+@{skillMod})]]}}  {{crit=[[round(([[(@{shieldToT}+@{skillMod})]])/10)+1]]}} {{success=[[(@{shieldToT}+@{skillMod})]]}} {{roll=[[1d100]]}} {{weapon=@{ShieldType}}} {{skill=Shield}} {{type=[[1]]}} {{impale=[[0]]}} {{damage=[[@{shieldDamage}+@{damagebonus}]] Knockback}} {{critdamage=[[@{shieldDamage}+@{shieldDamage}+@{damagebonus}]] Knockback}} {{mntTogVal=[[0}]]}}  {{rollname=[Roll Fumble](~h2hfumble)}}"></button></div>
+						<div class="sheet-col9  sheet-row2"><button  type="roll" name="roll_shieldDamage" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{shieldToT}+@{skillMod})]]}}  {{crit=[[round(([[(@{shieldToT}+@{skillMod})]])/10)+1]]}} {{success=[[(@{shieldToT}+@{skillMod})]]}} {{roll=[[1d100]]}} {{weapon=@{ShieldType}}} {{skill=Shield}} {{type=[[1]]}} {{impale=[[0]]}} {{damage=[[@{shieldDamage}+@{damagebonus}]] Knockback}} {{critdamage=[[@{shieldDamage}+@{shieldDamage}+@{damagebonus}]] Knockback}} {{mntTogVal=[[0}]]}}"></button></div>
 	
 						<div class="sheet-col10  sheet-row2">
 							<div class="sheet-fillCell">
@@ -733,7 +733,7 @@
 				  <input name="attr_skillTotal" class="sheet-text_input sheet-2digits sheet-col8" type="text" readonly="" value="0"><button  type="roll" class="sheet-col9" style="margin-right: 0px; margin-left: 0px;"  name="roll_meleeWpn" value="@{melee_value}"></button>
 								<input name="attr_fumbleRoll" type="hidden" value="&{template:default} {{msg=Hi there}}">
 
-								<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/10)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d100]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{damagebonus}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{damagebonus}]]}} {{mntTogVal=[[@{mntDbToggle}]]}} {{mntDamage=[[@{wpn_damage}+@{mountDB}]]}} {{mntCrit=[[@{wpn_damage}+@{wpn_damage}+@{mountDB}]]}}</textarea> 
+								<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/10)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d100]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{damagebonus}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{damagebonus}]]}} {{mntTogVal=[[@{mntDbToggle}]]}} {{mntDamage=[[@{wpn_damage}+@{mountDB}]]}} {{mntCrit=[[@{wpn_damage}+@{wpn_damage}+@{mountDB}]]}}  {{rollname=[Click H-to-H Fumbles]}}</textarea> 
 <!-- Test for Melee Fumbles		<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/10)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d2+98]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{damagebonus}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{damagebonus}]]}} {{mntTogVal=[[@{mntDbToggle}]]}} {{mntDamage=[[@{wpn_damage}+@{mountDB}]]}} {{mntCrit=[[@{wpn_damage}+@{wpn_damage}+@{mountDB}]]}}  {{rollname=[Roll Fumble](~summonFumble)}}</textarea>-->
 
 
@@ -820,7 +820,7 @@
 					<input name="attr_skillTotal" class="sheet-text_input sheet-2digits sheet-col8" type="text" readonly="" value="0"><button  type="roll" class="col9" style="margin-right: 0px; margin-left: 0px;" name="roll_msslWpn"  value="@{melee_value}"></button>
 
 
-								<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/10)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d100]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{wpnmdb}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{wpnmdb}]]}} {{mntTogVal=[[0]]}}</textarea>
+								<textarea name="attr_melee_value" style="display: none;">&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{skillTotal})]]}}  {{crit=[[round(([[(@{skillTotal})]])/10)+1]]}} {{success=[[(@{skillTotal})]]}} {{roll=[[1d100]]}} {{weapon=@{weapon_type}}} {{skill=@{skillName}}} {{type=[[1]]}} {{impale=[[@{impales}]]}} {{damage=[[@{wpn_damage}+@{wpnmdb}]]}} {{critdamage=[[@{wpn_damage}+@{wpn_damage}+@{wpnmdb}]]}} {{mntTogVal=[[0]]}}  {{rollname=[Click Missile Fumbles]}}</textarea>
 
 
 				  <input name="attr_wpn_damage" class="sheet-text_input  sheet-cellFill  sheet-col10" type="text">
@@ -976,7 +976,7 @@
 				</div>
 			</div>
 			<div class="sheet-centerDiv sheet-marginT10">
-				<button  type="roll" class="sheet-text_roll"  name="roll_powRoll" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{pow}*5)]]}}  {{crit=[[round(([[(@{pow}*5)]])/10)+1]]}} {{success=[[(@{pow}*5)]]}} {{roll=[[1d100]]}} {{skill=Summoning Roll}} {{type=0}} {{impale=0}}"><span nodata-i18n="Summoning-Roll">Summoning  Roll</span></button><button type="roll" name="roll_summonFumble" class="sheet-text_roll" value="&{template:summonFumble} {{roll=[[1d100]]}}" nodata-i18n="Summoning-Fumble">Summoning Fumble</button><button type="roll" style="padding-top: 0px;" class="sheet-turn_order sheet-col17" title="Add to turn order" value="&{template:turnOrder} {{weapon=Spell Casting}}} {{rank=[[[[100+@{int}]] &{tracker}]]}}" ></button>
+				<button  type="roll" class="sheet-text_roll"  name="roll_powRoll" value="&{template:Roll} {{name=@{character_name}}} {{skillModVal=[[(@{pow}*5)]]}}  {{crit=[[round(([[(@{pow}*5)]])/10)+1]]}} {{success=[[(@{pow}*5)]]}} {{roll=[[1d100]]}} {{skill=Summoning Roll}} {{type=[[0]]}} {{impale=[[0]]}} {{rollname=[Roll Fumble](~summonFumble)}}"><span nodata-i18n="Summoning-Roll">Summoning  Roll</span></button><button type="roll" name="roll_summonFumble" class="sheet-text_roll" value="&{template:summonFumble} {{roll=[[1d100]]}}" nodata-i18n="Summoning-Fumble">Summoning Fumble</button><button type="roll" style="padding-top: 0px;" class="sheet-turn_order sheet-col17" title="Add to turn order" value="&{template:turnOrder} {{weapon=Spell Casting}}} {{rank=[[[[100+@{int}]] &{tracker}]]}}" ></button>
 			</div>
 			<br>
 			<div class="sheet-bold">Disclaimers:</div>
@@ -1015,7 +1015,7 @@
 								<option value="Touch"><span nodata-i18n="Touch">Touch</span></option>
 							</select>
 							<input class="sheet-col6" type="text" style="width: 58px; margin-bottom: 0px;" name="attr_spellDamage" value="0"/>
-							<button type="roll" class="sheet-col7" name="act_spellDamage" value="&{template:Roll} {{skillModVal=[[(@{pow}*5+?{Mod.|0})]]}}  {{crit=[[round(([[(@{pow}*5+?{Mod.|0})]])/10)+1]]}} {{success=[[(@{pow}*5+?{Mod.|0})]]}} {{roll=[[1d100]]}} {{weapon=@{character_name} casts}} {{skill=@{spellName} (@{spellSource})}} {{type=[[1]]}} {{impale=[[0]]}} {{damage=[[@{spellDamage}]]}} {{critdamage=[[@{spellDamage}+@{spellDamage}]]}} {{mntTogVal=[[0}]]}}  {{rollname=[Roll Fumble](~summonFumble)}}"></button>
+							<button type="roll" class="sheet-col7" name="act_spellDamage" value="&{template:Roll} {{skillModVal=[[(@{pow}*5+?{Mod.|0})]]}}  {{crit=[[round(([[(@{pow}*5+?{Mod.|0})]])/10)+1]]}} {{success=[[(@{pow}*5+?{Mod.|0})]]}} {{roll=[[1d100]]}} {{weapon=@{character_name} casts}} {{skill=@{spellName} (@{spellSource})}} {{type=[[1]]}} {{impale=[[0]]}} {{damage=[[@{spellDamage}]]}} {{critdamage=[[@{spellDamage}+@{spellDamage}]]}} {{mntTogVal=[[0}]]}}"></button>
 						</div>
 						<div><textarea class="sheet-marginT10 sheet-spellEffect" name="attr_spellEffect"></textarea></div>
 					</fieldset>
@@ -1189,17 +1189,17 @@
 							</div>
 							<div class="sheet-demonStatWrapper sheet-marginT10">
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
-									<input type="text" name="attr_demon_con"  value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_con}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_con}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_con}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Constitution Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_con"  value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_con}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_con}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_con}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Constitution Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row1" nodata-i18n="STR">STR</span>
-									<input type="text" name="attr_demon_str"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_str}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_str}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_str}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Strength Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_str"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_str}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_str}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_str}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Strength Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row1" nodata-i18n="SIZ">SIZ</span>
-									<input type="text" name="attr_demon_siz"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_siz}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_siz}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_siz}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Size Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_siz"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_siz}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_siz}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_siz}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Size Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row2" nodata-i18n="INT">INT</span>
-									<input type="text" name="attr_demon_int"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_int}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_int}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_int}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Idea Roll}} {{type=0}} {{impale=0}}" type="roll"></button>
+									<input type="text" name="attr_demon_int"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_int}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_int}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_int}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Idea Roll}} {{type=[[0]]}} {{impale=[[0]]}}" type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row2" nodata-i18n="POW">POW</span>
-									<input type="text" name="attr_demon_pow"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_pow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_pow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_pow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Luck Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_pow"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_pow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_pow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_pow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Luck Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row2" nodata-i18n="DEX">DEX</span>
-									<input type="text"  name="attr_demon_dex"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_dex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Dexterity Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text"  name="attr_demon_dex"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_name}}} {{skillModVal=[[(@{demon_dex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name} Dexterity Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 
 
 								</div>
@@ -1247,7 +1247,7 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
@@ -1293,17 +1293,17 @@
 							</div>
 							<div class="sheet-demonStatWrapper sheet-marginT10">
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
-									<input type="text"  name="attr_demon_con3" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonCon3" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_con3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_con3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_con3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Constitution Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text"  name="attr_demon_con3" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonCon3" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_con3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_con3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_con3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Constitution Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row1" nodata-i18n="STR">STR</span>
-									<input type="text" name="attr_demon_str3"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonStr3" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_str3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_str3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_str3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Strength Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_str3"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonStr3" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_str3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_str3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_str3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Strength Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row1" nodata-i18n="SIZ">SIZ</span>
-									<input type="text" name="attr_demon_siz3"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonSiz3" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_siz3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_siz3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_siz3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Size Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_siz3"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonSiz3" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_siz3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_siz3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_siz3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Size Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row2" nodata-i18n="INT">INT</span>
-									<input type="text" name="attr_demon_int3"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_int3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_int3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_int3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Idea Roll}} {{type=0}} {{impale=0}}" type="roll"></button>
+									<input type="text" name="attr_demon_int3"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_int3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_int3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_int3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Idea Roll}} {{type=[[0]]}} {{impale=[[0]]}}" type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row2" nodata-i18n="POW">POW</span>
-									<input type="text" name="attr_demon_pow3"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_pow3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_pow3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_pow3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Luck Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_pow3"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_pow3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_pow3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_pow3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Luck Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row2" nodata-i18n="DEX">DEX</span>
-									<input type="text"  name="attr_demon_dex3"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_dex3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dex3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dex3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Dexterity Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text"  name="attr_demon_dex3"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_name3}}} {{skillModVal=[[(@{demon_dex3}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dex3}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dex3}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name3} Dexterity Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 
 
 								</div>
@@ -1346,7 +1346,7 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 									<textarea class="sheet-abilityEffect" name="attr_abilityEffect"></textarea>
@@ -1396,17 +1396,17 @@
 							<div class="sheet-demonStatWrapper sheet-marginT10">
 
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
-									<input type="text"  name="attr_demon_con2" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonCon2" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_con2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_con2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_con2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Constitution Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text"  name="attr_demon_con2" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonCon2" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_con2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_con2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_con2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Constitution Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row1" nodata-i18n="STR">STR</span>
-									<input type="text" name="attr_demon_str2"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonStr2" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_str2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_str2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_str2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Strength Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_str2"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonStr2" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_str2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_str2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_str2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Strength Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row1" nodata-i18n="SIZ">SIZ</span>
-									<input type="text" name="attr_demon_siz2"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonSiz2" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_siz2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_siz2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_siz2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Size Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_siz2"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonSiz2" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_siz2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_siz2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_siz2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Size Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row2" nodata-i18n="INT">INT</span>
-									<input type="text" name="attr_demon_int2"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_int2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_int2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_int2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Idea Roll}} {{type=0}} {{impale=0}}" type="roll"></button>
+									<input type="text" name="attr_demon_int2"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_int2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_int2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_int2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Idea Roll}} {{type=[[0]]}} {{impale=[[0]]}}" type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row2" nodata-i18n="POW">POW</span>
-									<input type="text" name="attr_demon_pow2"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_pow2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_pow2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_pow2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Luck Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_pow2"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_pow2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_pow2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_pow2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Luck Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row2" nodata-i18n="DEX">DEX</span>
-									<input type="text"  name="attr_demon_dex2"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_dex2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dex2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dex2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Dexterity Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text"  name="attr_demon_dex2"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_name2}}} {{skillModVal=[[(@{demon_dex2}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dex2}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dex2}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_name2} Dexterity Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 
 
 								</div>
@@ -1449,7 +1449,7 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 									<textarea class="sheet-abilityEffect" name="attr_abilityEffect"></textarea>
@@ -1495,17 +1495,17 @@
 							<div class="sheet-demonStatWrapper sheet-marginT10">
 
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
-									<input type="text"  name="attr_demon_conNYD" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonConNYD" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_conNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_conNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_conNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Constitution Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text"  name="attr_demon_conNYD" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonConNYD" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_conNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_conNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_conNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Constitution Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row1" nodata-i18n="STR">STR</span>
-									<input type="text" name="attr_demon_strNYD"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonStrNYD" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_strNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_strNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_strNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Strength Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_strNYD"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonStrNYD" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_strNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_strNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_strNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Strength Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row1" nodata-i18n="SIZ">SIZ</span>
-									<input type="text" name="attr_demon_sizNYD"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonSizNYD" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_sizNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_sizNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_sizNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Size Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_sizNYD"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonSizNYD" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_sizNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_sizNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_sizNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Size Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row2" nodata-i18n="INT">INT</span>
-									<input type="text" name="attr_demon_intNYD"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_intNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_intNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_intNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Idea Roll}} {{type=0}} {{impale=0}}" type="roll"></button>
+									<input type="text" name="attr_demon_intNYD"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_intNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_intNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_intNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Idea Roll}} {{type=[[0]]}} {{impale=[[0]]}}" type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row2" nodata-i18n="POW">POW</span>
-									<input type="text" name="attr_demon_powNYD"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_powNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_powNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_powNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Luck Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text" name="attr_demon_powNYD"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_powNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_powNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_powNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Luck Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row2" nodata-i18n="DEX">DEX</span>
-									<input type="text"  name="attr_demon_dexNYD"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_dexNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dexNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dexNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Dexterity Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+									<input type="text"  name="attr_demon_dexNYD"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demon_nameNYD}}} {{skillModVal=[[(@{demon_dexNYD}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demon_dexNYD}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demon_dexNYD}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demon_nameNYD} Dexterity Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 
 
 								</div>
@@ -1548,7 +1548,7 @@
 										<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 										<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 										<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+										<input name="attr_AbilityChance" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance})]]}}  {{crit=[[round(([[(@{AbilityChance})]])/10)+1]]}} {{success=[[(@{AbilityChance})]]}} {{roll=[[1d100]]}} {{skill=@{demonAbility} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 									</div>
 									<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 									<textarea class="sheet-abilityEffect" name="attr_abilityEffect"></textarea>
@@ -1630,17 +1630,17 @@
 						</div>
 						<div class="sheet-demonStatWrapper sheet-marginT10">
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
-							<input type="text"  name="attr_demonLeftCon" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonLeftCon" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftCon}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftCon}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftCon}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Constitution Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text"  name="attr_demonLeftCon" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonLeftCon" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftCon}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftCon}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftCon}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Constitution Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row1" nodata-i18n="STR">STR</span>
-							<input type="text" name="attr_demonLeftStr"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonLeftStr" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftStr}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftStr}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftStr}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Strength Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text" name="attr_demonLeftStr"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonLeftStr" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftStr}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftStr}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftStr}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Strength Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row1" nodata-i18n="SIZ">SIZ</span>
-							<input type="text" name="attr_demonLeftSiz"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonLeftSiz" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftSiz}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftSiz}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftSiz}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Size Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text" name="attr_demonLeftSiz"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonLeftSiz" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftSiz}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftSiz}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftSiz}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Size Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row2" nodata-i18n="INT">INT</span>
-							<input type="text" name="attr_demonLeftInt"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftInt}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftInt}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftInt}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Idea Roll}} {{type=0}} {{impale=0}}" type="roll"></button>
+							<input type="text" name="attr_demonLeftInt"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftInt}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftInt}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftInt}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Idea Roll}} {{type=[[0]]}} {{impale=[[0]]}}" type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row2" nodata-i18n="POW">POW</span>
-							<input type="text" name="attr_demonLeftPow"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftPow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftPow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftPow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Luck Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text" name="attr_demonLeftPow"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftPow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftPow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftPow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Luck Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row2" nodata-i18n="DEX">DEX</span>
-							<input type="text"  name="attr_demonLeftDex"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftDex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftDex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftDex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Dexterity Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text"  name="attr_demonLeftDex"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demonLeftName}}} {{skillModVal=[[(@{demonLeftDex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonLeftDex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonLeftDex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName} Dexterity Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<div class="sheet-marginT5">
 							<span class="sheet-centerText sheet-bold "  nodata-i18n="Dam-Bonus">Dam.Bonus</span>
@@ -1676,7 +1676,7 @@
 							<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability1" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance1})]]}}  {{crit=[[round(([[(@{AbilityChance1})]])/10)+1]]}} {{success=[[(@{AbilityChance1})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability1" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance1})]]}}  {{crit=[[round(([[(@{AbilityChance1})]])/10)+1]]}} {{success=[[(@{AbilityChance1})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<div class="sheet-abilityEffectHdr" nodata-i18n="Effect">Effect</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect1"></textarea>
@@ -1684,21 +1684,21 @@
 							<input type="text" name="attr_demonAbility2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange2" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability2" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility2}}} {{skillModVal=[[(@{AbilityChance2})]]}}  {{crit=[[round(([[(@{AbilityChance2})]])/10)+1]]}} {{success=[[(@{AbilityChance2})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility2} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability2" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility2}}} {{skillModVal=[[(@{AbilityChance2})]]}}  {{crit=[[round(([[(@{AbilityChance2})]])/10)+1]]}} {{success=[[(@{AbilityChance2})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility2} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect2"></textarea>
 						<div class="sheet-demonAbilities">
 							<input type="text" name="attr_demonAbility3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange3" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance3" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability3" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility3}}} {{skillModVal=[[(@{AbilityChance3})]]}}  {{crit=[[round(([[(@{AbilityChance3})]])/10)+1]]}} {{success=[[(@{AbilityChance3})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility3} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance3" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability3" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility3}}} {{skillModVal=[[(@{AbilityChance3})]]}}  {{crit=[[round(([[(@{AbilityChance3})]])/10)+1]]}} {{success=[[(@{AbilityChance3})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility3} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect3"></textarea>
 						<div class="sheet-demonAbilities">
 							<input type="text" name="attr_demonAbility4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange4" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance4" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability4" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility4}}} {{skillModVal=[[(@{AbilityChance4})]]}}  {{crit=[[round(([[(@{AbilityChance4})]])/10)+1]]}} {{success=[[(@{AbilityChance4})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility4} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance4" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability4" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility4}}} {{skillModVal=[[(@{AbilityChance4})]]}}  {{crit=[[round(([[(@{AbilityChance4})]])/10)+1]]}} {{success=[[(@{AbilityChance4})]]}} {{roll=[[1d100]]}} {{skill=@{demonLeftName}&#x000D;&#x000A;@{demonAbility4} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect4"></textarea>
 						<br>
@@ -1786,17 +1786,17 @@
 						</div>
 						<div class="sheet-demonStatWrapper sheet-marginT10">
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row1" nodata-i18n="CON">CON</span>
-							<input type="text"  name="attr_demonRightCon" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonRightCon" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightCon}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightCon}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightCon}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Constitution Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text"  name="attr_demonRightCon" value="0" class="sheet-col2 sheet-row1 sheet-char_values"/><button name="roll_demonRightCon" class="sheet-row1 sheet-col3" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightCon}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightCon}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightCon}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Constitution Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row1" nodata-i18n="STR">STR</span>
-							<input type="text" name="attr_demonRightStr"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonRightStr" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightStr}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightStr}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightStr}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Strength Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text" name="attr_demonRightStr"  value="0" class="sheet-col5 sheet-row1 sheet-char_values"/><button name="roll_demonRightStr" class="sheet-row1 sheet-col6" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightStr}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightStr}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightStr}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Strength Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row1" nodata-i18n="SIZ">SIZ</span>
-							<input type="text" name="attr_demonRightSiz"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonRightSiz" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightSiz}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightSiz}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightSiz}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Size Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text" name="attr_demonRightSiz"  value="0" class="sheet-col8 sheet-row1 sheet-char_values"/><button name="roll_demonRightSiz" class="sheet-row1 sheet-col9" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightSiz}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightSiz}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightSiz}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Size Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col1 sheet-row2" nodata-i18n="INT">INT</span>
-							<input type="text" name="attr_demonRightInt"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightInt}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightInt}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightInt}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Idea Roll}} {{type=0}} {{impale=0}}" type="roll"></button>
+							<input type="text" name="attr_demonRightInt"  value="0" class="sheet-col2 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col3" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightInt}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightInt}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightInt}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Idea Roll}} {{type=[[0]]}} {{impale=[[0]]}}" type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col4 sheet-row2" nodata-i18n="POW">POW</span>
-							<input type="text" name="attr_demonRightPow"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightPow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightPow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightPow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Luck Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text" name="attr_demonRightPow"  value="0" class="sheet-col5 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col6" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightPow}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightPow}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightPow}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Luck Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 							<span class="sheet-centerText sheet-bottCell sheet-bold sheet-col7 sheet-row2" nodata-i18n="DEX">DEX</span>
-							<input type="text"  name="attr_demonRightDex"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightDex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightDex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightDex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Dexterity Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input type="text"  name="attr_demonRightDex"  value="0" class="sheet-col8 sheet-row2 sheet-char_values"/><button class="sheet-row2 sheet-col9" value="&{template:Roll} {{name=@{demonRightName}}} {{skillModVal=[[(@{demonRightDex}*?{Multiplier|5})]]}}  {{crit=[[round(([[(@{demonRightDex}*?{Multiplier|5})]])/10)+1]]}} {{success=[[(@{demonRightDex}*?{Multiplier|5})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName} Dexterity Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<div class="sheet-marginT5">
 							<span class="sheet-centerText sheet-bold "  nodata-i18n="Dam-Bonus">Dam.Bonus</span>
@@ -1832,7 +1832,7 @@
 							<input type="text" name="attr_demonAbility" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability1" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance1})]]}}  {{crit=[[round(([[(@{AbilityChance1})]])/10)+1]]}} {{success=[[(@{AbilityChance1})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance1" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability1" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility}}} {{skillModVal=[[(@{AbilityChance1})]]}}  {{crit=[[round(([[(@{AbilityChance1})]])/10)+1]]}} {{success=[[(@{AbilityChance1})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 
 						</div>
 						<div class="sheet-abilityEffectHdr" nodata-i18n="demonAbilityEffect">Effect</div>
@@ -1841,21 +1841,21 @@
 							<input type="text" name="attr_demonAbility2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost2" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange2" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability2" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility2}}} {{skillModVal=[[(@{AbilityChance2})]]}}  {{crit=[[round(([[(@{AbilityChance2})]])/10)+1]]}} {{success=[[(@{AbilityChance2})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility2} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance2" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability2" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility2}}} {{skillModVal=[[(@{AbilityChance2})]]}}  {{crit=[[round(([[(@{AbilityChance2})]])/10)+1]]}} {{success=[[(@{AbilityChance2})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility2} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect2"></textarea>
 						<div class="sheet-demonAbilities">
 							<input type="text" name="attr_demonAbility3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost3" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange3" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance3" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability3" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility3}}} {{skillModVal=[[(@{AbilityChance3})]]}}  {{crit=[[round(([[(@{AbilityChance3})]])/10)+1]]}} {{success=[[(@{AbilityChance3})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility3} Roll}} {{type=0}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance3" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability3" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility3}}} {{skillModVal=[[(@{AbilityChance3})]]}}  {{crit=[[round(([[(@{AbilityChance3})]])/10)+1]]}} {{success=[[(@{AbilityChance3})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility3} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect3"></textarea>
 						<div class="sheet-demonAbilities">
 							<input type="text" name="attr_demonAbility4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-col1"/>
 							<input type="text" name="attr_abilityMPCost4" class="sheet-text_input sheet-topCell sheet-cellFill sheet-centerText sheet-col2"/>
 							<input type="text" name="attr_abilityRange4" class="sheet-text_input sheet-topCell  sheet-cellFill sheet-centerText sheet-col3"/>
-							<input name="attr_AbilityChance4" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability4" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility4}}} {{skillModVal=[[(@{AbilityChance4})]]}}  {{crit=[[round(([[(@{AbilityChance4})]])/10)+1]]}} {{success=[[(@{AbilityChance4})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility4} Roll}} {{impale=0}}"  type="roll"></button>
+							<input name="attr_AbilityChance4" class="sheet-col4 sheet-text_input sheet-cellFill sheet-centerText sheet-topCell" type="text" /><button name="roll_ability4" class="sheet-col5 sheet-textButton " value="&{template:Roll} {{name=@{demonAbility4}}} {{skillModVal=[[(@{AbilityChance4})]]}}  {{crit=[[round(([[(@{AbilityChance4})]])/10)+1]]}} {{success=[[(@{AbilityChance4})]]}} {{roll=[[1d100]]}} {{skill=@{demonRightName}&#x000D;&#x000A;@{demonAbility4} Roll}} {{type=[[0]]}} {{impale=[[0]]}}"  type="roll"></button>
 						</div>
 						<textarea class="sheet-abilityEffectSmall" name="attr_abilityEffect4"></textarea>
 						<br>
@@ -1952,7 +1952,7 @@
 
 				{{#rollGreater() roll 98}}
 					{{#rollTotal() roll 100}}
-						<div class="rollResult">Press [H-to-H-Fumbles] button for Outcome</div> <!-- Result:Fumble -->
+						<div class="rollResult">Result:Fumble</div> <!-- Result:Fumble -->
 						{{#rollname}}
 							<div class="rollResult">
 								{{rollname}}
@@ -1964,7 +1964,12 @@
 							<div class="rollResult">Result:Failure</div>
 						{{/rollGreater() skillModVal 100}}
 						{{#^rollGreater() skillModVal 100}}
-							<div class="rollResult">Press [H-to-H-Fumbles] button for Outcome</div> <!-- Result:Fumble -->
+							<div class="rollResult">Result:Fumble</div>
+							{{#rollname}}
+								<div class="rollResult">
+									{{rollname}}
+								</div>
+							{{/rollname}}
 						{{/^rollGreater() skillModVal 100}} 
 					{{/^rollTotal() roll 100}}
 				{{/rollGreater() roll 98}}
@@ -1977,16 +1982,22 @@
 
 					{{#^rollGreater() roll skillModVal}}
 						{{#rollTotal() roll 1}}
+
 							{{#rollTotal() impale 1}}
 								<div class="rollResult">Result:Impale</div>
-								<div class="rollResult">Normal Damage:{{damage}}</div>
-								<div class="rollResult">Critical Damage:{{critdamage}}</div>
+								{{#rollTotal() type 1}}
+									<div class="rollResult">Normal Damage:{{damage}}</div>
+									<div class="rollResult">Critical Damage:{{critdamage}}</div>
+								{{/rollTotal() type 1}}
 							{{/rollTotal() impale 1}}
 							{{#^rollTotal() impale 1}}
 								<div class="rollResult">Result:Critical</div>
-								<div class="rollResult">Normal Damage:{{damage}}</div>
-								<div class="rollResult">Critical Damage:{{critdamage}}</div>
+								{{#rollTotal() type 1}}
+									<div class="rollResult">Normal Damage:{{damage}}</div>
+									<div class="rollResult">Critical Damage:{{critdamage}}</div>
+								{{/rollTotal() type 1}}
 							{{/^rollTotal() impale 1}}
+
 						{{/rollTotal() roll 1}}
 
 						{{#^rollTotal() roll 1}}
@@ -2009,8 +2020,8 @@
 									{{/^rollTotal() mntTogVal 1}}
 								{{/rollTotal() type 1}}
 							{{/^rollBetween() roll 2 crit}}
+							
 						{{/^rollTotal() roll 1}}
-
 
 					{{/^rollGreater() roll skillModVal}}
 
