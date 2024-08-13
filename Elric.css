@@ -416,7 +416,8 @@ input.sheet-spellHgt {
 
 .sheet-msslWrapper{
 	display: grid;
-    grid-template-columns:108px 69px 18px 41px 16px 34px 38px 44px 35px 49px 34px 59px 61px 34px 51px 64px 57px;
+    grid-template-columns:108px 69px 18px 41px 16px 34px 38px 44px 35px 32px 32px 34px 59px 50px 34px 51px 64px 57px;
+/*  grid-template-columns:108px 69px 18px 41px 16px 34px 38px 44px 35px 49px 34px 59px 61px 34px 51px 64px 57px; */
     grid-gap: 0px;
     grid-auto-rows: minmax(auto, auto);
 	align-items: end;
@@ -1446,6 +1447,15 @@ div.repcontrol.editmode button.repcontrol_edit::before
 	font-weight: bold;
 	border-radius: 4px;
 	margin-left: -5%;
+}
+
+.charsheet input.sheet-redtext {
+    color: black;
+}
+
+ /* .charsheet input.sheet-ammocheck[value="1"] ~ input.sheet-redtext { */
+input.sheet-ammocheck[value="1"] ~ input.sheet-redtext { */
+    color: red;
 }
 
 .charsheet input.sheet-HideConfig {
